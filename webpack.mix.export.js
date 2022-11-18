@@ -22,7 +22,6 @@ let exportPath = 'inheritance';
 
 // Theme root-level files to include.
 let files = [
-	'changelog.md',
 	'functions.php',
 	'index.php',
 	'readme.txt',
@@ -33,7 +32,6 @@ let files = [
 // Folders to include.
 let folders = [
 	'app',
-	'languages',
 	'public',
 	'vendor'
 ];
