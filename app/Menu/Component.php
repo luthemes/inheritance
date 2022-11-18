@@ -17,8 +17,6 @@ class Component extends MenuContract {
     public function menus() {
         return [
             'primary'   => esc_html__( 'Primary Navigation', 'inheritance' ),
-            'secondary' => esc_html__( 'Secondary Navigation', 'inheritance' ),
-            'social'    => esc_html__( 'Social Navigation', 'inheritance' )
         ];
     }
 
