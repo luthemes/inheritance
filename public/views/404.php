@@ -11,12 +11,9 @@
 ?>
 <?php $engine = Benlumia007\Backdrop\App::resolve( 'view/engine' ); ?>
 <?php $engine->display( 'header' ); ?>
-	<section id="content" class="site-content">
-		<div id="global-layout" class="<?php echo esc_attr( get_theme_mod( 'global_layout', 'left-sidebar' ) ); ?>">
-			<main id="main" class="content-area">
-				<?php $engine->display( 'content/404' ); ?>
-			</main>
-			<?php Benlumia007\Backdrop\View\display( 'sidebar', [ 'primary' ] ); ?>
-		</div>
+	<section id="content" class="app-content">
+		<main id="main" class="app-main">
+			<?php $engine->display( 'content/404' ); ?>
+		</main>
 	</section>
 <?php $engine->display( 'footer' ); ?>
