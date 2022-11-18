@@ -14,18 +14,18 @@
 			<?php
 			printf(
 				// Translators: 1 = Date, 2 = Site Link.
-				esc_html__( 'Copyright &#169; %1$s. %2$s', 'initiator' ),
+				esc_html__( 'Copyright &#169; %1$s. %2$s', 'inheritance' ),
 				absint( date_i18n( 'Y' ) ),
-				Benlumia007\Backdrop\Theme\Site\render_site_link() // phpcs:ignore
+				Inheritance\Theme\Site\render_site_link() // phpcs:ignore
 			);
 			?>
 			<br />
 			<?php
 			printf(
 				// Translators: 1 = WordPress Link, 2 = Theme Link.
-				esc_html__( 'Powered By %1$s and %2$s', 'initiator' ),
-				Benlumia007\Backdrop\Theme\Site\render_wp_link(), // phpcs:ignore
-				Benlumia007\Backdrop\Theme\Site\render_theme_link() // phpcs:ignore
+				esc_html__( 'Powered By %1$s and %2$s', 'inheritance' ),
+				Inheritance\Theme\Site\render_wp_link(), // phpcs:ignore
+				Inheritance\Theme\Site\render_theme_link() // phpcs:ignore
 			);
 			?>
 		</div>

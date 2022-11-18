@@ -16,12 +16,12 @@ class Component extends SidebarContract {
     public function sidebars() {
         return array(
             'primary' => [
-                'name' => esc_html__( 'Primary Sidebar', 'initiator' ),
-                'desc' => esc_html__( 'test', 'initiator' ),
+                'name' => esc_html__( 'Primary Sidebar', 'inheritance' ),
+                'desc' => esc_html__( 'test', 'inheritance' ),
             ],
             'secondary' => [
-                'name' => esc_html__( 'Secondary Sidebar', 'initiator' ),
-                'desc' => esc_html__( 'test', 'initiator' ),
+                'name' => esc_html__( 'Secondary Sidebar', 'inheritance' ),
+                'desc' => esc_html__( 'test', 'inheritance' ),
             ]
         );
     }

@@ -11,7 +11,7 @@
 /**
  * Define namespace
  */
-namespace Inheritance\Theme\Entry;
+namespace inheritance\Theme\Entry;
 
 function display_title( array $args = [] ) {
 	echo render_title( $args ); 
@@ -240,7 +240,7 @@ function render_categories( array $args = [] ) {
 		'taxonomy' => 'category',
 		'text'     => '%s',
 		'class'    => 'cat-list',
-		'sep'      => _x( ' | ', 'taxonomy terms separator', 'backdrop' ),
+		'sep'      => _x( ' | ', 'taxonomy terms separator', 'inheritance' ),
 		'before'   => '<div class="cat-link">',
 		'after'    => '</div>'
 	] );
@@ -288,7 +288,7 @@ function render_tags( array $args = [] ) {
 		'taxonomy' => 'post_tag',
 		'text'     => '%s',
 		'class'    => 'tag-list',
-		'sep'      => _x( ' | ', 'taxonomy terms separator', 'backdrop' ),
+		'sep'      => _x( ' | ', 'taxonomy terms separator', 'inheritance' ),
 		'before'   => '<div class="tag-link">',
 		'after'    => '</div>'
 	] );

@@ -18,11 +18,11 @@
 		<?php
 			wp_link_pages(
 				array(
-					'before'      => '<div class="page-links">' . esc_html__( 'Pages:', 'initiator' ),
+					'before'      => '<div class="page-links">' . esc_html__( 'Pages:', 'inheritance' ),
 					'after'       => '</div>',
 					'link_before' => '<span>',
 					'link_after'  => '</span>',
-					'pagelink'    => '<span class="screen-reader-text">' . esc_html__( 'Page', 'initiator' ) . ' </span>%',
+					'pagelink'    => '<span class="screen-reader-text">' . esc_html__( 'Page', 'inheritance' ) . ' </span>%',
 					'separator'   => '<span class="screen-reader-text">,</span> ',
 				)
 			);

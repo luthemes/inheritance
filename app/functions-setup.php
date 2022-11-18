@@ -79,7 +79,7 @@ add_action( 'after_setup_theme', function() {
 		'header-image' => [
 			'url'           => '%s/public/images/header-image.jpg',
 			'thumbnail_url' => '%s/public/images/header-image.jpg',
-			'description'   => esc_html__( 'Header Image', 'initiator' ),
+			'description'   => esc_html__( 'Header Image', 'inheritance' ),
 		],
 	] );
 } );
@@ -94,10 +94,10 @@ add_action( 'after_setup_theme', function() {
  */
 add_action( 'backdrop/templates/register', function( $templates ) {
 	$templates->add( 'template-left-sidebar.php', [
-		'label' => esc_html__( 'Left Sidebar', 'initiator' )
+		'label' => esc_html__( 'Left Sidebar', 'inheritance' )
 	] );
 
 	$templates->add( 'template-right-sidebar.php', [
-		'label' => esc_html__( 'Right Sidebar', 'initiator' )
+		'label' => esc_html__( 'Right Sidebar', 'inheritance' )
 	] );
 } );
