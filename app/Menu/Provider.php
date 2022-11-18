@@ -11,9 +11,9 @@
 /**
  * Define namespace
  */
-namespace Initiator\Menu;
+namespace Inheritance\Menu;
 use Benlumia007\Backdrop\Support\ServiceProvider;
-use Initiator\Menu\Component;
+use Inheritance\Menu\Component;
 
 /**
  * Attr provider class.

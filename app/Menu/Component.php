@@ -1,6 +1,6 @@
 <?php
 
-namespace Initiator\Menu;
+namespace Inheritance\Menu;
 use Benlumia007\Backdrop\Theme\Menu\Component as MenuContract;
 use function Benlumia007\Backdrop\Mix\Manifest\asset;
 

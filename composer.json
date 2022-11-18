@@ -1,11 +1,11 @@
 {
-    "name": "benlumia007/initiator",
-    "description": "Initiator is a starter theme designed to help theme authors using Backdrop Core Framework.",
+    "name": "benlumia007/inheritance",
+    "description": "Inheritance is the next level theme to support ClassicPress.",
     "keywords": [
-        "wordpress",
-        "wordpress-theme"
+        "classicpress",
+        "classicpress-theme"
     ],
-    "homepage": "https://github.com/benlumia007/initiator",
+    "homepage": "https://github.com/benlumia007/inheritance",
     "license": "GPL-2.0-or-later",
     "authors": [
         {
@@ -16,7 +16,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Initiator\\": "app/"
+            "Inheritance\\": "app/"
 		},
 		"files":[
 			"app/framework.php",
