@@ -2,11 +2,11 @@
 /**
  * Default comments template
  *
- * @package   Initiator
- * @author    Benjamin Lu ( benlumia007@gmail.com )
- * @copyright Copyright (C) 2019-2021. Benjamin Lu
+ * @package   Inheritance
+ * @author    Benjamin Lu <benlumia007@gmail.com>
+ * @copyright Copyright (C) 2022. Benjamin Lu
  * @license   https://www.gnu.org/licenses/gpl-2.0.html
- * @link      https://github.com/benlumia007/initiator
+ * @link      https://github.com/benlumia007/inheritance
  */
 ?>
 
@@ -37,7 +37,7 @@ if ( post_password_required() ) {
 					array(
 						'style'       => 'ol',
 						'short_ping'  => true,
-						'avatar_size' => 70,
+						'avatar_size' => 50,
 					)
 				);
 			?>

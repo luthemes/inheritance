@@ -12,7 +12,7 @@
 /**
  * Define namespace
  */
-namespace Initiator;
+namespace Inheritance;
 use Benlumia007\Backdrop\App;
 use function Benlumia007\Backdrop\Mix\Manifest\asset;
 /**

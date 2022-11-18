@@ -1,11 +1,12 @@
 <?php
 /**
- * Backdrop Core ( functions-entry.php )
+ * Theme - Entry
  *
- * @package   Backdrop Core
- * @copyright Copyright (C) 2019-2021. Benjamin Lu
- * @author    Benjamin Lu ( https://getbenonit.com )
+ * @package   Inheritance
+ * @author    Benjamin Lu <benlumia007@gmail.com>
+ * @copyright Copyright (C) 2022. Benjamin Lu
  * @license   https://www.gnu.org/licenses/gpl-2.0.html
+ * @link      https://github.com/benlumia007/inheritance
  */
 
 /**
@@ -43,7 +44,7 @@ function render_title( array $args = [] ) {
 		$text
 	);
 
-	return apply_filters( 'backdrop/theme/display/title', $args['before'] . $html . $args['after'] );
+	return apply_filters( 'inheritance/theme/display/title', $args['before'] . $html . $args['after'] );
 }
 
 /**
@@ -85,7 +86,7 @@ function render_permalink( array $args = [] ) {
 		sprintf( $args['text'], esc_url( $url ) )
 	);
 
-	return apply_filters( 'backdrop/theme/display/permalink', $args['before'] . $html . $args['after'] );
+	return apply_filters( 'inheritance/theme/display/permalink', $args['before'] . $html . $args['after'] );
 }
 
 /**
@@ -124,7 +125,7 @@ function render_author( array $args = [] ) {
 
 	$html = sprintf( '<i class="fas fa-user"></i><span class="%s">%s</span>', esc_attr( $args['class'] ), $author );
 
-	return apply_filters( 'backdrop/theme/display/author', $args['before'] . $html . $args['after'] );
+	return apply_filters( 'inheritance/theme/display/author', $args['before'] . $html . $args['after'] );
 }
 
 /**
@@ -216,7 +217,7 @@ function render_comments_link( array $args = [] ) {
 		$text
 	);
 
-	return apply_filters( 'backdrop/theme/display/comments/link', $args['before'] . $html . $args['after'] );
+	return apply_filters( 'inheritance/theme/display/comments/link', $args['before'] . $html . $args['after'] );
 }
 
 function display_categories( array $args = [] ) {
@@ -263,7 +264,7 @@ function render_categories( array $args = [] ) {
 		$html = $args['before'] . $html . $args['after'];
 	}
 
-	return apply_filters( 'backdrop/theme/display/categories', $html );
+	return apply_filters( 'inheritance/theme/display/categories', $html );
 }
 
 
@@ -311,5 +312,5 @@ function render_tags( array $args = [] ) {
 		$html = $args['before'] . $html . $args['after'];
 	}
 
-	return apply_filters( 'backdrop/theme/display/tags', $html );
+	return apply_filters( 'inheritance/theme/display/tags', $html );
 }

@@ -1,10 +1,10 @@
 <?php
 /**
- * Boot the framework
+ * Boot the Framework
  *
- * @package   inheritance
- * @author    Benjamin Lu ( benlumia007@gmail.com )
- * @copyright Copyright (C) 2019-2021. Benjamin Lu
+ * @package   Inheritance
+ * @author    Benjamin Lu <benlumia007@gmail.com>
+ * @copyright Copyright (C) 2022. Benjamin Lu
  * @license   https://www.gnu.org/licenses/gpl-2.0.html
  * @link      https://github.com/benlumia007/inheritance
  */
@@ -30,7 +30,6 @@ $inheritance->provider( Benlumia007\Backdrop\Template\View\Provider::class );
  * Register custom providers for the theme.
  */
 $inheritance->provider( Inheritance\Menu\Provider::class );
-// $inheritance->provider( inheritance\Sidebar\Provider::class );
 
 /**
  * Create an action hook for child themes.

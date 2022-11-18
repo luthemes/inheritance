@@ -1,11 +1,12 @@
-<?php //phpcs:ignore
+<?php 
 /**
- * Backdrop Core ( functions-site.php )
+ * Theme - Site
  *
- * @package     Backdrop Core
- * @copyright   Copyright (C) 2019-2020. Benjamin Lu
- * @license     GNU General PUblic License v2 or later ( https://www.gnu.org/licenses/gpl-2.0.html )
- * @author      Benjamin Lu ( https://benjlu.com )
+ * @package   Inheritance
+ * @author    Benjamin Lu <benlumia007@gmail.com>
+ * @copyright Copyright (C) 2022. Benjamin Lu
+ * @license   https://www.gnu.org/licenses/gpl-2.0.html
+ * @link      https://github.com/benlumia007/inheritance
  */
 
 /**
@@ -22,7 +23,7 @@ namespace Inheritance\Theme\Site;
  * @return void
  */
 function display_site_title( array $args = [] ) {
-	echo render_site_title( $args ); // phpcs:ignore
+	echo render_site_title( $args ); 
 }
 
 /**
@@ -54,7 +55,7 @@ function render_site_title( array $args = [] ) {
 			$link // phpcs:ignore
 		);
 	}
-	return apply_filters( 'backdrop/theme/render/site/title', $html );
+	return apply_filters( 'inheritance/theme/render/site/title', $html );
 }
 
 /**
@@ -94,7 +95,7 @@ function render_site_description( array $args = [] ) {
 			$title
 		);	
 	}
-	return apply_filters( 'backdrop/theme/render/site/description', $html );
+	return apply_filters( 'inheritance/theme/render/site/description', $html );
 }
 
 
@@ -134,7 +135,7 @@ function render_site_link( array $args = [] ) {
 		esc_url( home_url( '/' ) ),
 		sprintf( $args['text'], get_bloginfo( 'name' ) )
 	);
-	return apply_filters( 'backdrop/theme/render/site/link', $html );
+	return apply_filters( 'inheritance/theme/render/site/link', $html );
 }
 
 /**
@@ -171,7 +172,7 @@ function render_wp_link( array $args = [] ) {
 		esc_url( __( 'https://wordpress.org', 'inheritance' ) ),
 		sprintf( $args['text'], esc_html__( 'WordPress', 'inheritance' ) )
 	);
-	return apply_filters( 'backdrop/theme/render/wp/link', $html );
+	return apply_filters( 'inheritance/theme/render/wp/link', $html );
 }
 
 function display_theme_link( array $args = [] ) {
@@ -210,7 +211,7 @@ function render_theme_link( array $args = [] ) {
 		wp_kses( $theme->display( 'Name' ), $allowed )
 	);
 
-	return apply_filters( 'backdrop/theme/render/theme/link', $args['before'] . $html . $args['after'] );
+	return apply_filters( 'inheritance/theme/render/theme/link', $args['before'] . $html . $args['after'] );
 }
 
 
@@ -250,7 +251,7 @@ function render_home_link( array $args = [] ) {
 		esc_url( home_url() ),
 		sprintf( $args['text'], get_bloginfo( 'name', 'display' ) )
 	);
-	return apply_filters( 'backdrop/theme/render/home/link', $args['before'] . $html . $args['after'] );
+	return apply_filters( 'inheritance/theme/render/home/link', $args['before'] . $html . $args['after'] );
 }
 
 /**
@@ -287,5 +288,5 @@ function render_cp_link( array $args = [] ) {
 		esc_url( __( 'https://classicpress.net', 'inheritance' ) ),
 		sprintf( $args['text'], esc_html__( 'ClassicPress', 'inheritance' ) )
 	);
-	return apply_filters( 'backdrop/theme/render/cp/link', $html );
+	return apply_filters( 'inheritance/theme/render/cp/link', $html );
 }

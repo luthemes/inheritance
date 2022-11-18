@@ -12,7 +12,7 @@
 /**
  * Define namespace
  */
-namespace Initiator;
+namespace Inheritance;
 
 /**
  * Change Tempalate Path
