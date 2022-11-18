@@ -15,7 +15,7 @@
 		<?php } ?>
 		<?php Benlumia007\Backdrop\Theme\Entry\display_title(); ?>
 		<div class="entry-metadata">
-			<?php Benlumia007\Backdrop\Theme\Entry\display_date(); ?>
+			<?php Inheritance\Theme\Entry\display_date(); ?>
 		</div>
 	</header>
 	<div class="entry-excerpt">

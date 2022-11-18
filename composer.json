@@ -19,6 +19,7 @@
             "Inheritance\\": "app/"
 		},
 		"files":[
+			"app/Theme/Entry/functions-entry.php",
 			"app/framework.php",
 			"app/functions-filters.php",
 			"app/functions-scripts.php",
