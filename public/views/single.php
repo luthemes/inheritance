@@ -11,9 +11,9 @@
 ?>
 <?php $engine = Benlumia007\Backdrop\App::resolve( 'view/engine' ); ?>
 <?php $engine->display( 'header' ); ?>
-	<section id="content" class="site-content">
-		<div id="layout" class="<?php echo esc_attr( get_theme_mod( 'global_layout', 'no-sidebar' ) ); ?>">
-			<main id="main" class="content-area">
+	<section id="content" class="app-content">
+		<div id="layout" class="<?php echo esc_attr( get_theme_mod( 'global_layout', 'left-sidebar' ) ); ?>">
+			<main id="main" class="app-main">
 				<?php
 					if ( have_posts() ) :
 						while ( have_posts() ) : the_post();

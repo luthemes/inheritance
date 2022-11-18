@@ -1,0 +1,9 @@
+.home {
+	.app-main {
+		.post {
+			display: grid;
+			grid-template-columns: 1fr 75%;
+			grid-gap: 1.125rem;
+		}
+	}
+}

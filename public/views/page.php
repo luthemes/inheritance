@@ -11,9 +11,9 @@
 ?>
 <?php $engine = Benlumia007\Backdrop\App::resolve( 'view/engine' ); ?>
 <?php $engine->display( 'header' ); ?>
-	<section id="content" class="site-content">
+	<section id="content" class="app-content">
 		<div id="layout" class="<?php echo esc_attr( get_theme_mod( 'global_layout', 'no-sidebar' ) ); ?>">
-			<main id="main" class="content-area">
+			<main id="main" class="app-main">
 				<?php
 					if ( have_posts() ) :
 						while ( have_posts() ) : the_post();
@@ -25,7 +25,6 @@
 					endif;
 				?>
 			</main>
-			<?php Benlumia007\Backdrop\Theme\Sidebar\display( 'sidebar', [ 'primary' ] ); ?>
 		</div>
 	</section>
 <?php $engine->display( 'footer' ); ?>

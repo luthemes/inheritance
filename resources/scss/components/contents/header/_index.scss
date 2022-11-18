@@ -6,3 +6,37 @@
 // @license   GNU General Public License v2 or later ( https://www.gnu.org/licenses/gpl-2.0.html )
 // @author    Benjamin Lu ( https://getbenonit.com )
 //
+
+.site-header {
+    .branding-navigation {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+		grid-gap: 1.125em;
+
+        .site-branding {
+            .site-title,
+            .site-description {
+                margin: 0;
+                padding: 0;
+            }
+
+            .site-title {
+				float: left;
+				font-size: 2.3rem;
+
+                a {
+                    border-bottom: none;
+                    color: #757575;
+                    text-decoration: none;
+                }
+            }
+
+            .site-description {
+                color: #959595;
+				float: left;
+				font-size: 1.250rem;
+				padding: 0.8rem 0 0 1.5rem;
+            }
+        }
+    }
+}

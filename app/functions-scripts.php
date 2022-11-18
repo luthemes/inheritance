@@ -55,7 +55,3 @@ add_action( 'wp_enqueue_scripts', function() {
 	";
 	wp_add_inline_style( 'initiator-screen', $custom_css );
 } );
-
-add_action( 'enqueue_block_editor_assets', function() {
-	wp_enqueue_style( 'initiator-custom-fonts', get_parent_theme_file_uri( '/vendor/benlumia007/backdrop-googlefonts/assets/fonts/custom-fonts.css' ), array(), '1.0.0' );
-} );

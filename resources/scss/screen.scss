@@ -15,7 +15,7 @@
 //
 // Settings handle the configuration and variables.
 
-@import 'settings/index';
+@import '01.settings/index';
 
 // -----------------------------------------------------------------------------
 // Import tools.
@@ -62,15 +62,18 @@
 // fonts, etc. are best handled here. These are the base styles that other
 // styles will build upon.
 
-@import 'components/index';
+@import '06.layouts/index';
 
 // -----------------------------------------------------------------------------
-// Import block styles.
+// Import component styles.
 // -----------------------------------------------------------------------------
 //
-// Imports global block styles.
+// This is the first point that real CSS is output. Resets, normalization,
+// fonts, etc. are best handled here. These are the base styles that other
+// styles will build upon.
 
-@import 'blocks/index';
+@import '07.components/index';
+@import 'components/index';
 
 // -----------------------------------------------------------------------------
 // Import utility styles.

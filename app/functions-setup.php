@@ -56,55 +56,6 @@ add_action( 'after_setup_theme', function() {
 			'gallery',
 			'caption',
 		] );
-
-		/**
-		 * By adding add_theme_support( 'post-thumbnails' );, this feature when enabled allows you to setup featured images
-		 * also known as featured image. If you need to use conditional, please consider using has_post_thumbnail.
-		 */
-		add_theme_support( 'post-thumbnails' );
-
-		/**
-		 * By adding add_theme_support( 'post-formats' );, this feature when enabled allows you to setup post formats.
-		 */
-		add_theme_support( 'post-formats', [
-			'aside',
-		] );
-
-		/**
-		 * By add_image_size( 'initiator-small-thumbnails', 324, 324, true );. This should be used for content in the home for blogs.
-		 */
-		add_image_size( 'initiator-small-thumbnails', 324, 324, true );
-
-		/**
-		 * By add_image_size( 'initiator-medium-thumbnails', 810, 396, true );. This should be used for content that has sidebars.
-		 */
-		add_image_size( 'initiator-medium-thumbnails', 810, 396, true );
-
-		/**
-		 * By add_image_size( 'initiator-large-thumbnails', 1170, 614, true );. This should be used for content that has no sidebars.
-		 */
-		add_image_size( 'initiator-large-thumbnails', 1170, 614, true );
-
-		/**
-		 * By add_theme_support( 'wp-block-styles' );. This should enable block styles on the frontend.
-		 */
-		add_theme_support( 'wp-block-styles' );
-
-		/**
-		 * By adding add_theme_support( 'editor-styles' ); and add_editor_style(); to enable styles in the backend of the editor.
-		 */
-		add_theme_support( 'editor-styles' );
-		add_editor_style( 'public/assets/css/editor.css' );
-
-		/**
-		 * By adding add_theme_support( 'align-wide' );. This will enable alignwide and alignfull.
-		 */
-		add_theme_support( 'align-wide' );
-
-		/**
-		 * Load theme translation.
-		 */
-		load_theme_textdomain( 'initiator', get_parent_theme_file_path( '/languages ' ) );
 	}
 );
 
@@ -130,22 +81,6 @@ add_action( 'after_setup_theme', function() {
 			'thumbnail_url' => '%s/public/images/header-image.jpg',
 			'description'   => esc_html__( 'Header Image', 'initiator' ),
 		],
-	] );
-} );
-
-/**
- * Add Support Custom Background
- */
-add_action( 'after_setup_theme', function() {
-	add_theme_support( 'custom-background', [
-		'default-image'          => '',
-		'default-preset'         => 'default',
-		'default-position-x'     => 'left',
-		'default-position-y'     => 'top',
-		'default-size'           => 'auto',
-		'default-repeat'         => 'repeat',
-		'default-attachment'     => 'scroll',
-		'default-color'          => '',
 	] );
 } );
 

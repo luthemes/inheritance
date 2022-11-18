@@ -10,12 +10,10 @@
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php Benlumia007\Backdrop\Theme\Entry\display_title(); ?>
 		<div class="entry-metadata">
-			<?php Benlumia007\Backdrop\Theme\Entry\display_author(); ?>
 			<?php Benlumia007\Backdrop\Theme\Entry\display_date(); ?>
-			<?php Benlumia007\Backdrop\Theme\Entry\display_comments_link(); ?>
 		</div>
+		<?php Benlumia007\Backdrop\Theme\Entry\display_title(); ?>
 	</header>
 	<div class="entry-content">
 		<?php the_content(); ?>
