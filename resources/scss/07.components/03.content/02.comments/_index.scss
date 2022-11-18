@@ -72,9 +72,7 @@
     }
 
     .comment-respond {
-        border: 0.063rem solid #cccccc;
         margin-top: 1.125rem;
-        padding: 1.125rem;
 
         .comment-reply-title {
             margin: 0;
@@ -86,6 +84,7 @@
         }
 
         .comment-form {
+            margin-top: -1rem;
             .comment-form-comment {
                 &:before {
                     font-family: 'Font Awesome 5 Free';

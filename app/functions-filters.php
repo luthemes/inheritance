@@ -1,12 +1,12 @@
 <?php
 /**
- * Theme - filters
+ * Theme - Filters
  *
- * @package   Initiator
- * @author    Benjamin Lu ( benlumia007@gmail.com )
- * @copyright Copyright (C) 2016-2021. Benjamin Lu
+ * @package   Inheritance
+ * @author    Benjamin Lu <benlumia007@gmail.com>
+ * @copyright Copyright (C) 2022. Benjamin Lu
  * @license   https://www.gnu.org/licenses/gpl-2.0.html
- * @link      https://github.com/benlumia007/initiator
+ * @link      https://github.com/benlumia007/inheritance
  */
 
 /**
