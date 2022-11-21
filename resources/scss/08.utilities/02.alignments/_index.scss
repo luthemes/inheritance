@@ -10,6 +10,7 @@
 
 .alignleft {
 	float: left;
+	padding-right: 1.125rem;
 }
 
 .aligncenter {
@@ -18,10 +19,11 @@
 
 .alignright {
 	float: right;
+	padding-left: 1.125rem
 }
 
 .alignwide {
-	margin: 18px calc( ( 800px - 1170px ) / 2 );
+	margin: 18px calc( ( 640px - 940px ) / 2 );
 	max-width: 1170px;
 	width: auto;
 }

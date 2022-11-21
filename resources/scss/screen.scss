@@ -83,6 +83,4 @@
 // Utilities are helper classes and overrides. This gets loaded last. If
 // necessary, this is the only place where `!important` rules should go, but
 // only if necessary.
-
-@import 'utilities/index';
-@import '07.utilities/index';
+@import '08.utilities/index';
