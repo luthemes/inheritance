@@ -34,7 +34,7 @@
 // fonts, etc. are best handled here. These are the base styles that other
 // styles will build upon.
 
-@import 'generic/index';
+@import '03.generic/index';
 
 // -----------------------------------------------------------------------------
 // Import element styles.
@@ -45,6 +45,7 @@
 // styles should be handled later in the cascade.
 
 @import 'elements/index';
+@import '04.elements/index';
 
 // -----------------------------------------------------------------------------
 // Import object styles.
@@ -84,3 +85,4 @@
 // only if necessary.
 
 @import 'utilities/index';
+@import '07.utilities/index';
