@@ -1,8 +1,7 @@
 === Inheritance ===
 Contributors: benlumia007
 Requires at least: 4.9
-Tested up to WordPress.5.2
-Version: 2.0.8
+Version: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: grid-layout, left-sidebar, one-column, right-sidebar, two-columns, custom-background, custom-colors, custom-header, custom-logo, custom-menu, featured-images, footer-widgets, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, blog
@@ -37,6 +36,9 @@ Welcome to Inheritance WordPress theme. Inheritance is a fully functional mobile
 Not Available at this time
 
 == Changelog ==
+Version: 1.0.1 
+- Fixed minor escape outputs
+
 Version: 1.0.0
 - Initial Release
 
