@@ -20,7 +20,7 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="container" class="site-container">
-	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'inheritance' ) ?></a>
+	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'inheritance' ); ?></a>
 	<header id="masthead" class="site-header">
 		<div class="branding-navigation">
 			<div class="site-branding">
