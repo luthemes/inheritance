@@ -1,11 +1,12 @@
 <?php
 /**
- * Initiator ( functions.php )
+ * Default functions template
  *
- * @package   Initiator
- * @copyright Copyright (C) 2019-2021. Benjamin Lu
- * @license   GNU General Public License v2 or later ( https://www.gnu.org/licenses/gpl-2.0.html )
- * @author    Benjamin Lu ( https://getbenonit.com )
+ * @package   Inheritance
+ * @author    Benjamin Lu <benlumia007@gmail.com>
+ * @copyright Copyright (C) 2022. Benjamin Lu
+ * @license   https://www.gnu.org/licenses/gpl-2.0.html
+ * @link      https://github.com/benlumia007/inheritance
  */
 
 /**
@@ -18,7 +19,7 @@
 /**
  * 1.0 - Compatibility Check
  */
-function initiator_compatibility_check() {
+function inheritance_compatibility_check() {
 	if ( version_compare( $GLOBALS['wp_version'], '4.9', '<' ) ) {
 		return sprintf(
 			// translators: 1 =  a version string, 2 = current wp version string.
@@ -40,20 +41,20 @@ function initiator_compatibility_check() {
 /**
  * Triggered after switch themes and check if it meets the requirements.
  */
-function initiator_switch_theme() {
+function inheritance_switch_theme() {
 	if ( version_compare( $GLOBALS['wp_version'], '4.9', '<' ) || version_compare( PHP_VERSION, '5.6', '<' ) ) {
 		switch_theme( get_option( 'theme_switched' ) );
-		add_action( 'admin_notices', 'initiator_upgrade_notice' );
+		add_action( 'admin_notices', 'inheritance_upgrade_notice' );
 	}
 	return false;
 }
-add_action( 'after_switch_theme', 'initiator_switch_theme' );
+add_action( 'after_switch_theme', 'inheritance_switch_theme' );
 
 /**
  * Displays an error if it doesn't meet the requirements.
  */
-function initiator_upgrade_notice() {
-	printf( '<div class="error"><p>%s</p></div>', esc_html( initiator_compatibility_check() ) );
+function inheritance_upgrade_notice() {
+	printf( '<div class="error"><p>%s</p></div>', esc_html( inheritance_compatibility_check() ) );
 }
 
 /**
