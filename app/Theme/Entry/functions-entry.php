@@ -15,7 +15,7 @@
 namespace inheritance\Theme\Entry;
 
 function display_title( array $args = [] ) {
-	echo render_title( $args ); 
+	echo render_title( $args ); // phpcs:ignore
 }
 
 function render_title( array $args = [] ) {
@@ -56,8 +56,7 @@ function render_title( array $args = [] ) {
  * @return void
  */
 function display_permalink( array $args = [] ) {
-
-	echo render_permalink( $args ); 
+	echo render_permalink( $args ); // phpcs:ignore
 }
 
 /**
@@ -98,8 +97,7 @@ function render_permalink( array $args = [] ) {
  * @return void
  */
 function display_author( array $args = [] ) {
-
-	echo render_author( $args );
+	echo render_author( $args ); // phpcs:ignore
 }
 
 function render_author( array $args = [] ) {

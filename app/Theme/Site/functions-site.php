@@ -23,7 +23,7 @@ namespace Inheritance\Theme\Site;
  * @return void
  */
 function display_site_title( array $args = [] ) {
-	echo render_site_title( $args ); 
+	echo render_site_title( $args ); // phpcs:ignore
 }
 
 /**
