@@ -12,9 +12,9 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<div class="entry-metadata">
-			<?php Benlumia007\Backdrop\Theme\Entry\display_date(); ?>
+			<?php Inheritance\Theme\Entry\display_date(); ?>
 		</div>
-		<?php Benlumia007\Backdrop\Theme\Entry\display_title(); ?>
+		<?php Inheritance\Theme\Entry\display_title(); ?>
 	</header>
 	<div class="entry-content">
 		<?php the_content(); ?>
@@ -32,7 +32,7 @@
 			?>
 	</div>
 	<div class="entry-taxonomies">
-		<?php Benlumia007\Backdrop\Theme\Entry\display_categories(); ?>
-		<?php Benlumia007\Backdrop\Theme\Entry\display_tags(); ?>
+		<?php Inheritance\Theme\Entry\display_categories(); ?>
+		<?php Inheritance\Theme\Entry\display_tags(); ?>
 	</div>
 </article>
