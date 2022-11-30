@@ -23,7 +23,7 @@
  */
 
 // EDIT: Make this unique. Example: YourDevName\YourPluginName;
-namespace Amicable;
+namespace Inheritance;
 
 // EDIT: URL where Update Manager is installed; with trailing slash!
 const UPDATE_SERVER = 'https://updates.luthemes.com';
