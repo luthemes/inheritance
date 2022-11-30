@@ -22,6 +22,7 @@
 			"app/Theme/Entry/functions-entry.php",
 			"app/Theme/Site/functions-site.php",
 			"app/framework.php",
+            "app/functions-compatibility.php",
 			"app/functions-filters.php",
 			"app/functions-scripts.php",
 			"app/functions-setup.php",

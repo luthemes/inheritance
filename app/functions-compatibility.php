@@ -16,14 +16,14 @@ function inheritance_compatibility_check() {
 	if ( version_compare( $GLOBALS['wp_version'], '4.9', '<' ) ) {
 		return sprintf(
 			// translators: 1 =  a version string, 2 = current wp version string.
-			__( 'Initiator requires at least WordPress version %1$s. You are currently running %2$s. Please upgrade and try again.', 'inheritance' ),
+			__( 'Inheritance requires at least WordPress version %1$s. You are currently running %2$s. Please upgrade and try again.', 'inheritance' ),
 			'4.9',
 			$GLOBALS['wp_version']
 		);
 	} elseif ( version_compare( PHP_VERSION, '7.4', '<' ) ) {
 		return sprintf(
 			// translators: 1 =  a version string, 2 = current wp version string.
-			__( 'Initiator requires at least PHP version %1$s. You are currently running %2$s. Please upgrade and try again.', 'inheritance' ),
+			__( 'Inheritance requires at least PHP version %1$s. You are currently running %2$s. Please upgrade and try again.', 'inheritance' ),
 			'7.4',
 			PHP_VERSION
 		);
