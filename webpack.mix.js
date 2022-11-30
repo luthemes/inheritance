@@ -7,10 +7,10 @@
  *
  * @link https://laravel.com/docs/5.6/mix
  *
- * @package   Initiator
+ * @package   Inheritance
  * @author    Benjamin Lu <benlumia007@gmail.com>
  * @copyright 2020 Benjamin Lu
- * @link      https://github.com/benlumia007/initiator
+ * @link      https://github.com/benlumia007/inheritance
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
  */
 
