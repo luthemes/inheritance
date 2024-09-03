@@ -12,7 +12,7 @@
  * @link      https://luthemes.com/portfolio/inheritance
  */
 
-namespace Exhale;
+namespace Inheritance;
 
 /**
  * Returns the metadata separator.
@@ -25,7 +25,7 @@ namespace Exhale;
 function sep( $sep = '' ) {
 
 	return apply_filters(
-		'exhale/sep',
+		'inheritance/sep',
 		sprintf(
 			' <span class="sep mx-2">%s</span> ',
 			$sep ?: esc_html_x( '&middot;', 'meta separator', 'inheritance' )
