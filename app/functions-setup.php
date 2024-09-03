@@ -14,6 +14,7 @@
  */
 namespace Inheritance;
 
+use function Backdrop\Fonts\enqueue;
 use function Backdrop\Theme\is_classicpress;
 
 /**
@@ -109,3 +110,23 @@ add_action( 'widgets_init', function() {
 		register_sidebar( array_merge( $sidebar, $args ) );
 	}
 }, 5 );
+
+/**
+ * Enqueues specific theme fonts.
+ *
+ * This function enqueues the specified fonts for use in the theme.
+ *
+ * @since  1.0.0
+ * @access public
+ * @return void
+ */
+add_action( 'wp_enqueue_scripts', function() {
+
+	array_map( function( $file ) {
+		enqueue( $file );
+	}, [
+		'fira-sans',
+		'merriweather',
+		'tangerine'
+	] );
+} );
