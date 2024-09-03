@@ -1,14 +1,3 @@
-<?php
-/**
- * Default header template
- *
- * @package   Inheritance
- * @author    Benjamin Lu <benlumia007@gmail.com>
- * @copyright Copyright (C) 2022. Benjamin Lu
- * @license   https://www.gnu.org/licenses/gpl-2.0.html
- * @link      https://github.com/benlumia007/inheritance
- */
-?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -24,9 +13,9 @@
 	<header id="masthead" class="site-header">
 		<div class="branding-navigation">
 			<div class="site-branding">
-				<?php Inheritance\Theme\Site\display_site_title(); ?>
-				<?php Inheritance\Theme\Site\display_site_description(); ?>
+				<?php Backdrop\Theme\Site\display_site_title(); ?>
+				<?php Backdrop\Theme\Site\display_site_description(); ?>
 			</div>
-			<?php Benlumia007\Backdrop\Theme\Menu\display( 'menu', [ 'primary' ] ); ?>
+			<?php Backdrop\View\display( 'nav/menu', [ 'sidebar' => 'primary' ] ); ?>
 		</div>
 	</header>
