@@ -1,25 +1,14 @@
-<?php
-/**
- * Default content/default template
- *
- * @package   Inheritance
- * @author    Benjamin Lu <benlumia007@gmail.com>
- * @copyright Copyright (C) 2022. Benjamin Lu
- * @license   https://www.gnu.org/licenses/gpl-2.0.html
- * @link      https://github.com/benlumia007/inheritance
- */
-?>
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php if ( is_sticky() && is_home() && ! is_paged() ) { ?>
-			<?php printf( '<span class="sticky-post">%1$s</span>', esc_html__( 'Featured', 'inheritance' ) ); ?>
-		<?php } ?>
-		<?php Inheritance\Theme\Entry\display_title(); ?>
-		<div class="entry-metadata">
-			<?php Inheritance\Theme\Entry\display_date(); ?>
-		</div>
-	</header>
-	<div class="entry-excerpt">
-		<?php the_excerpt(); ?>
-	</div>
-</article>
+<section id="content" class="site-content">
+	<main id="main" class="content-area">
+		<?php if ( have_posts() ) : ?>
+			<div class="loop">
+				<ul class="grid-items grid-col-3">
+					<?php while( have_posts() ) : the_post(); ?>
+						<?php Backdrop\View\display( 'entry' ); ?>
+					<?php endwhile; ?>
+				</ul>
+			</div>
+				<?php Backdrop\View\display( 'nav/pagination', 'posts' ); ?>
+		<?php endif; ?>
+	</main>
+</section>
