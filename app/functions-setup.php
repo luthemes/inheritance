@@ -14,6 +14,8 @@
  */
 namespace Inheritance;
 
+use Inheritance\Tools\Config;
+
 use function Backdrop\Fonts\enqueue;
 use function Backdrop\Theme\is_classicpress;
 
@@ -57,6 +59,16 @@ add_action( 'after_setup_theme', function() {
 			// Outputs HTML5 markup for core features.
 			add_theme_support( 'html5', [ 'caption', 'comment-form', 'comment-list', 'gallery', 'search-form' ] );
 		}
+
+		// Adds featured image support.
+		add_theme_support( 'post-thumbnails' );
+
+		$images = Config::get( 'image-sizes' );
+
+		foreach ( $images as $name => $size ) {
+			add_image_size( $name, $size['width'], $size['height'], true );
+		}
+
 	}
 );
 
