@@ -62,13 +62,6 @@ add_action( 'after_setup_theme', function() {
 
 		// Adds featured image support.
 		add_theme_support( 'post-thumbnails' );
-
-		$images = Config::get( 'image-sizes' );
-
-		foreach ( $images as $name => $size ) {
-			add_image_size( $name, $size['width'], $size['height'], true );
-		}
-
 	}
 );
 
@@ -110,11 +103,11 @@ add_action( 'widgets_init', function() {
 	$sidebars = [
 		[
 			'id' => 'primary',
-			'name' => esc_html__( 'Primary', 'creativity' )
+			'name' => esc_html__( 'Primary', 'inheritance' )
 		],
 		[
-			'id' => 'secondary',
-			'name' => esc_html__( 'Secondary', 'creativity' )
+			'id' => 'subsidiary',
+			'name' => esc_html__( 'Subsidiary', 'inheritance' )
 		]
 	];
 
