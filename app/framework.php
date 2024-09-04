@@ -14,29 +14,31 @@
  *x
  * This will create an instance of the framework allowing you to initialize the theme.
  */
-$inheritance = new Benlumia007\Backdrop\Framework();
+$theme = Backdrop\booted() ? Backdrop\app() : new Backdrop\Core\Application();
 
 /**
  * Register default providers.
  */
-$inheritance->provider( Benlumia007\Backdrop\FontAwesome\Provider::class );
-$inheritance->provider( Benlumia007\Backdrop\Fonts\Provider::class );
-$inheritance->provider( Benlumia007\Backdrop\Mix\Manifest\Provider::class );
-$inheritance->provider( Benlumia007\Backdrop\Template\Hierarchy\Provider::class );
-$inheritance->provider( Benlumia007\Backdrop\Template\Manager\Provider::class );
-$inheritance->provider( Benlumia007\Backdrop\Template\View\Provider::class );
+$theme->provider( Backdrop\Fonts\Provider::class );
+$theme->provider( Backdrop\Languages\Provider::class );
+$theme->provider( Backdrop\Mix\Provider::class );
+$theme->provider( Backdrop\Pagination\Provider::class );
+$theme->provider( Backdrop\Template\Hierarchy\Provider::class );
+$theme->provider( Backdrop\Template\Manager\Provider::class );
+$theme->provider( Backdrop\Theme\Provider::class );
+$theme->provider( Backdrop\View\Provider::class );
 
 /**
  * Register custom providers for the theme.
  */
-$inheritance->provider( Inheritance\Menu\Provider::class );
+$theme->provider( Inheritance\FeatureImage\Provider::class );
 
 /**
  * Create an action hook for child themes.
  */
-do_action( 'inheritance/child/theme', $inheritance );
+do_action( 'inheritance/child/theme', $theme );
 
 /**
  * Boot the Framework
  */
-$inheritance->boot();
+$theme->boot();
