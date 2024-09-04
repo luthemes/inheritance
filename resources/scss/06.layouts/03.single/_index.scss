@@ -1,7 +1,43 @@
-.single {
-	.app-main {
-		line-height: 1.8rem;
-		margin: 0 auto;
-		max-width: 640px;
+.single-post {
+
+	.content-area {
+		line-height: 1.7rem;
+
+		.entry-header {
+			margin: 1rem 0;
+
+			.entry-title {
+				margin: 0;
+				padding: 0;
+			}
+
+			.entry-metadata {
+				line-height: 1.25rem;
+	
+	
+				.entry-published {
+					display: block;
+					color: grey;
+				}
+	
+	
+			}
+		}
+
+		.post-thumbnail {
+			.size-inheritance-landscape-medium,
+			.size-inheritance-landscape-large {
+				display: block;
+				border-radius: 0.5rem;
+				box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+
+		.entry-content {
+			margin: 0 auto;
+			max-width: 600px;
+		}
 	}
 }
