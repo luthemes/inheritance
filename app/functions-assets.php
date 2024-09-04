@@ -32,6 +32,13 @@ add_action( 'wp_enqueue_scripts', function() {
 	wp_enqueue_style( 'inheritance-screen', asset( 'assets/css/screen.css' ), null, null );
 	wp_enqueue_script( 'inheritance-app', asset( 'assets/js/app.js' ), [ 'jquery' ], null, true );
 
+	// Enqueue Navigation.
+	wp_enqueue_script( 'inheritance-navigation', asset( 'assets/js/navigation.js' ), null, null, true );
+	wp_localize_script( 'inheritance-navigation', 'inheritanceScreenReaderText', [
+		'expand'   => '<span class="screen-reader-text">' . esc_html__( 'expand child menu', 'inheritance' ) . '</span>',
+		'collapse' => '<span class="screen-reader-text">' . esc_html__( 'collapse child menu', 'inheritance' ) . '</span>',
+	] );
+
 	/**
 	 * This allows users to comment by clicking on reply so that it gets nested.
 	 */
