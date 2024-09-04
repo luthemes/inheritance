@@ -13,6 +13,13 @@
 
  return [
 
+	// Landscape sizes.
+	'inheritance-landscape-small' => [
+		'label'            => __( 'Landscape: Small', 'inheritance' ),
+		'width'            => 284,
+		'height'           => 150,
+		'is_featured_size' => false
+	],
 	'inheritance-landscape-medium' => [
 		'label'  => __( 'Landscape: Medium', 'inheritance' ),
 		'width'  => 640,
