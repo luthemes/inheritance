@@ -36,9 +36,6 @@ mix.setPublicPath( 'public' );
  */
 mix.options( {
 	processCssUrls : false,
-	terser: {
-		extractComments: false,
-	}
 } );
 
 /*
