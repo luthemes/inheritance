@@ -4,17 +4,17 @@
  *
  * A simple class for outputting the appropriate footer credit text.
  *
- * @package   inheritance
+ * @package   Inheritance
  * @author    Benjamin Lu <benlumia007@gmail.com>
- * @copyright 2024 Benjamin Lu
+ * @copyright 2022 Benjamin Lu
  * @license   https://www.gnu.org/licenses/gpl-2.0.html
  * @link      https://luthemes.com/portfolio/inheritance
  */
 
-namespace inheritance\Template;
+namespace Inheritance\Template;
 
-use inheritance\Tools\Mod;
-use inheritance\Tools\PoweredBy;
+use Inheritance\Tools\Mod;
+use Inheritance\Tools\PoweredBy;
 
 /**
  * Powered by class.
