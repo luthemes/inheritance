@@ -12,13 +12,17 @@
  */
 
  return [
-
 	// Landscape sizes.
+	'post-thumbnail' => [
+		'label'            => __( 'Landscape: Thumbnail', 'inheritance' ),
+		'width'            => 178,
+		'height'           => 100,
+		'is_featured_size' => false
+	],
 	'inheritance-landscape-small' => [
 		'label'            => __( 'Landscape: Small', 'inheritance' ),
 		'width'            => 284,
 		'height'           => 150,
-		'is_featured_size' => false
 	],
 	'inheritance-landscape-medium' => [
 		'label'  => __( 'Landscape: Medium', 'inheritance' ),
@@ -27,7 +31,7 @@
 	],
 	'inheritance-landscape-large' => [
 		'label'  => __( 'Landscape: Large', 'inheritance' ),
-		'width'  => 896,
-		'height' => 504
+		'width'  => 800,
+		'height' => 450
 	]
 ];
