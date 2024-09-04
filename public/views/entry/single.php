@@ -5,19 +5,22 @@
 			<?php Backdrop\Theme\Entry\display_date(); ?>
 		</div>
 	</header>
-	<div class="story-content">
-		<?php if ( has_post_thumbnail() ) { ?>
-			<picture class="post-thumbnail">
-			<?php
-				$size = get_theme_mod( 'theme_content_feature_image', 'inheritance-landscape-medium' ) ? get_theme_mod( 'theme_content_feature_image' ) : Mod::fallback( 'featured_image_size' );
-				the_post_thumbnail( $size );
-			?>				
-			</picture>
-		<?php } ?>
-		<div class="entry-content">
-			<?php the_content(); ?>
-			<?php Backdrop\View\display( 'nav/pagination', 'post' ); ?>
-		</div>	
+	<div class="entry-container">
+		<div class="story-content">
+			<?php if ( has_post_thumbnail() ) { ?>
+				<picture class="post-thumbnail">
+				<?php
+					$size = get_theme_mod( 'theme_content_feature_image', 'inheritance-landscape-medium' ) ? get_theme_mod( 'theme_content_feature_image' ) : Mod::fallback( 'featured_image_size' );
+					the_post_thumbnail( $size );
+				?>				
+				</picture>
+			<?php } ?>
+			<div class="entry-content">
+				<?php the_content(); ?>
+				<?php Backdrop\View\display( 'nav/pagination', 'post' ); ?>
+				<?php comments_template(); ?>
+			</div>	
+		</div>
+		<?php Backdrop\View\display( 'sidebar', 'primary', [ 'sidebar' => 'primary'] ); ?>
 	</div>
-	<?php Backdrop\View\display( 'sidebar', 'primary', [ 'sidebar' => 'primary'] ); ?>
 </article>
