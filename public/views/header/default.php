@@ -16,6 +16,6 @@
 				<?php Backdrop\Theme\Site\display_site_title(); ?>
 				<?php Backdrop\Theme\Site\display_site_description(); ?>
 			</div>
-			<?php Backdrop\View\display( 'nav/menu', [ 'sidebar' => 'primary' ] ); ?>
+			<?php Backdrop\View\display( 'nav/menu', 'primary', [ 'location' => 'primary' ] ); ?>
 		</div>
 	</header>
