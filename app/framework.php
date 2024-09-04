@@ -31,6 +31,8 @@ $theme->provider( Backdrop\View\Provider::class );
 /**
  * Register custom providers for the theme.
  */
+$theme->provider( Inheritance\Provider::class );
+$theme->provider( Inheritance\Customize\Provider::class );
 $theme->provider( Inheritance\FeatureImage\Provider::class );
 
 /**
