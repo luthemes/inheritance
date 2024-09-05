@@ -14,6 +14,7 @@
 namespace Inheritance;
 
 use Inheritance\Template\ErrorPage;
+use Inheritance\Settings\Options;
 
 /**
  * Change Tempalate Path
