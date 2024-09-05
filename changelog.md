@@ -1,5 +1,10 @@
 # Change Log
 
+## 0.0.4 - 09.04.2024
+
+### Enhancement
+- Fixed functions-filter.php
+
 ## 0.0.3 - 09.04.2024
 
 ### Added
