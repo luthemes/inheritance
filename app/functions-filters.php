@@ -89,7 +89,7 @@ add_filter( 'backdrop/view/content/data', function( $data ) {
 add_filter( 'display_post_states', function( $states, $post ) {
 
 	if ( 'page' === $post->post_type && $post->ID === absint( Options::get( 'error_page' ) ) ) {
-		$states['exhale_error_404'] = __( '404 Page', 'exhale' );
+		$states['exhale_error_404'] = __( '404 Page', 'inheritance' );
 	}
 
 	return $states;
