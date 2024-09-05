@@ -51,7 +51,7 @@ class General extends View {
 	 */
 	public function label() {
 
-		return esc_html__( 'General', 'prismatic' );
+		return esc_html__( 'General', 'inheritance' );
 	}
 
 	/**
@@ -118,11 +118,11 @@ class General extends View {
 	 */
 	public function registerDefaultSections() {
 
-		$label = is_classicpress() ? __( 'Clean ClassicPress', 'prismatic' ) : __( 'Clean WordPress', 'prismatic' );
+		$label = is_classicpress() ? __( 'Clean ClassicPress', 'inheritance' ) : __( 'Clean WordPress', 'inheritance' );
 
 		$sections = [
 			'reading' => [
-				'label'    => __( 'Reading', 'prismatic' ),
+				'label'    => __( 'Reading', 'inheritance' ),
 				'callback' => 'sectionReading'
 			],
 			'clean_cp' => [
@@ -156,24 +156,24 @@ class General extends View {
 
 			// Reading fields.
 			'error_page' => [
-				'label'    => __( '404 Page', 'prismatic' ),
+				'label'    => __( '404 Page', 'inheritance' ),
 				'callback' => 'fieldErrorPage',
 				'section'  => 'reading'
 			],
 
 			// Clean WP fields.
 			'emoji' => [
-				'label'    => __( 'Emoji', 'prismatic' ),
+				'label'    => __( 'Emoji', 'inheritance' ),
 				'callback' => 'fieldEmoji',
 				'section'  => 'clean_cp',
 			],
 			'toolbar' => [
-				'label'    => __( 'Toolbar', 'prismatic' ),
+				'label'    => __( 'Toolbar', 'inheritance' ),
 				'callback' => 'fieldToolbar',
 				'section'  => 'clean_cp'
 			],
 			'embeds' => [
-				'label'    => __( 'Embeds', 'prismatic' ),
+				'label'    => __( 'Embeds', 'inheritance' ),
 				'callback' => 'fieldEmbeds',
 				'section'  => 'clean_cp'
 			]
@@ -201,7 +201,7 @@ class General extends View {
 	 */
 	public function sectionReading() { ?>
 		<p>
-			<?php esc_html_e( 'Settings related to reading and display options for your site, including the 404 error page.', 'prismatic' ) ?>
+			<?php esc_html_e( 'Settings related to reading and display options for your site, including the 404 error page.', 'inheritance' ) ?>
 		</p>
 
 	<?php }
@@ -216,7 +216,7 @@ class General extends View {
 	public function sectionCleanCP() { ?>
 
 		<p>
-			<?php esc_html_e( 'Clean up unnecessary items on the front end of your site for speed improvements.', 'prismatic' ) ?>
+			<?php esc_html_e( 'Clean up unnecessary items on the front end of your site for speed improvements.', 'inheritance' ) ?>
 		</p>
 
 	<?php }
@@ -258,7 +258,7 @@ class General extends View {
 
 					<?php if ( current_user_can( 'publish_pages' ) ) : ?>
 
-						<a href="<?php echo esc_url( add_query_arg( 'post_type', 'page', admin_url( 'post-new.php' ) ) ) ?>"><?php esc_html_e( 'Add New Page', 'prismatic' ) ?></a>
+						<a href="<?php echo esc_url( add_query_arg( 'post_type', 'page', admin_url( 'post-new.php' ) ) ) ?>"><?php esc_html_e( 'Add New Page', 'inheritance' ) ?></a>
 
 					<?php endif ?>
 
@@ -267,7 +267,7 @@ class General extends View {
 		</p>
 
 		<p class="description">
-			<?php esc_html_e( 'Select a page to display when users visit a 404 error on your site. Ensure the page is set to private so it does not appear on the front end.', 'prismatic' ) ?>
+			<?php esc_html_e( 'Select a page to display when users visit a 404 error on your site. Ensure the page is set to private so it does not appear on the front end.', 'inheritance' ) ?>
 		</p>
 
 	<?php }
@@ -284,12 +284,12 @@ class General extends View {
 		<p>
 			<label>
 				<input type="checkbox" name="Prismatic_settings[disable_emoji]" value="true" <?php checked( Options::get( 'disable_emoji' ) ) ?> />
-				<?php esc_html_e( 'Disable Emoji Scripts', 'prismatic' ) ?>
+				<?php esc_html_e( 'Disable Emoji Scripts', 'inheritance' ) ?>
 			</label>
 		</p>
 
 		<p class="description">
-			<?php esc_html_e( 'All modern browsers support emoji natively. Disabling emoji scripts removes the JavaScript loaded on every page of your site for a small percentage of users on outdated browsers.', 'prismatic' ) ?>
+			<?php esc_html_e( 'All modern browsers support emoji natively. Disabling emoji scripts removes the JavaScript loaded on every page of your site for a small percentage of users on outdated browsers.', 'inheritance' ) ?>
 		</p>
 
 	<?php }
@@ -306,11 +306,11 @@ class General extends View {
 		<p>
 			<label>
 				<input type="checkbox" name="Prismatic_settings[disable_toolbar]" value="true" <?php checked( Options::get( 'disable_toolbar' ) ) ?> />
-				<?php esc_html_e( 'Disable Toolbar', 'prismatic' ) ?>
+				<?php esc_html_e( 'Disable Toolbar', 'inheritance' ) ?>
 			</label>
 		</p>
 		<p class="description">
-			<?php esc_html_e( 'Disables the toolbar on the front end of the site, which loads additional JavaScript and CSS on every page load.', 'prismatic' ) ?>
+			<?php esc_html_e( 'Disables the toolbar on the front end of the site, which loads additional JavaScript and CSS on every page load.', 'inheritance' ) ?>
 		</p>
 
 	<?php }
@@ -323,7 +323,7 @@ class General extends View {
 	 * @return void
 	 */
 	public function fieldEmbeds() {
-		$label = is_classicpress() ? __( 'Disable ClassicPress Embeds', 'prismatic' ) : __( 'Disable WordPress Embeds', 'prismatic' );
+		$label = is_classicpress() ? __( 'Disable ClassicPress Embeds', 'inheritance' ) : __( 'Disable WordPress Embeds', 'inheritance' );
 		?>
 
 		<p>
@@ -334,7 +334,7 @@ class General extends View {
 		</p>
 
 		<p class="description">
-			<?php esc_html_e( 'Removes the JavaScript that allows other sites to embed your posts.', 'prismatic' ) ?>
+			<?php esc_html_e( 'Removes the JavaScript that allows other sites to embed your posts.', 'inheritance' ) ?>
 		</p>
 
 	<?php }
@@ -351,7 +351,7 @@ class General extends View {
 		<form method="post" action="options.php">
 			<?php settings_fields( 'Prismatic_settings' ); ?>
 			<?php do_settings_sections( 'Prismatic_settings' ); ?>
-			<?php submit_button( esc_attr__( 'Update Settings', 'prismatic' ), 'primary' ); ?>
+			<?php submit_button( esc_attr__( 'Update Settings', 'inheritance' ), 'primary' ); ?>
 		</form>
 
 	<?php }
