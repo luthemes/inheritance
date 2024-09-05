@@ -35,13 +35,6 @@ Welcome to Inheritance WordPress theme. Inheritance is a fully functional mobile
 == Frequent Asked Questions ==
 Not Available at this time
 
-== Changelog ==
-Version: 1.0.1 
-- Fixed minor escape outputs
-
-Version: 1.0.0
-- Initial Release
-
 == Resources ==
 Font Awesome ( Version: 5.0 )
 Created By: Fonticons, Inc
