@@ -34,6 +34,7 @@ $theme->provider( Backdrop\View\Provider::class );
 $theme->provider( Inheritance\Provider::class );
 $theme->provider( Inheritance\Customize\Provider::class );
 $theme->provider( Inheritance\FeatureImage\Provider::class );
+$theme->provider( Inheritance\Settings\Provider::class );
 
 /**
  * Create an action hook for child themes.
