@@ -13,11 +13,12 @@
 
 namespace Inheritance\Customize;
 
+use Backdrop\App;
 use Backdrop\Contracts\Bootable;
+use function Backdrop\Mix\asset;
+
 use Inheritance\Tools\Config;
 use Inheritance\Tools\Mod;
-use Backdrop\App;
-use function Backdrop\Mix\asset;
 use Inheritance\Tools\Collection;
 
 use WP_Customize_Manager;
