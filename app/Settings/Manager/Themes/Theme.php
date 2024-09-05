@@ -236,7 +236,7 @@ class Theme {
 					<?php if ( $this->active() ) : ?>
 						<?php printf(
 							'<span>%s</span> %s',
-							esc_html__( 'Active:', 'Inheritance' ),
+							esc_html__( 'Active:', 'inheritance' ),
 							esc_html( $this->label() )
 						) ?>
 					<?php else : ?>
@@ -272,7 +272,7 @@ class Theme {
 				$actions[] = sprintf(
 					'<a class="button button-primary load-customize hide-if-no-customize" href="%s">%s</a>',
 					esc_url( $this->customizeUrl() ),
-					esc_html__( 'Customize', 'Inheritance' )
+					esc_html__( 'Customize', 'inheritance' )
 				);
 			}
 
@@ -281,8 +281,8 @@ class Theme {
 				$actions[] = sprintf(
 					'<a class="button activate" href="%s" aria-label="%s">%s</a>',
 					esc_url( $this->activateUrl() ),
-					esc_attr( sprintf( __( 'Activate %s', 'Inheritance' ), $this->label() ) ),
-					esc_html__( 'Activate', 'Inheritance' )
+					esc_attr( sprintf( __( 'Activate %s', 'inheritance' ), $this->label() ) ),
+					esc_html__( 'Activate', 'inheritance' )
 				);
 			}
 
@@ -291,7 +291,7 @@ class Theme {
 				$actions[] = sprintf(
 					'<a class="button button-primary load-customize hide-if-no-customize" href="%s">%s</a>',
 					esc_url( $this->customizeUrl() ),
-					esc_html__( 'Live Preview', 'Inheritance' )
+					esc_html__( 'Live Preview', 'inheritance' )
 				);
 			}
 
@@ -300,7 +300,7 @@ class Theme {
 			$actions[] = sprintf(
 				'<a class="button button-primary" href="%s" target="_blank">%s</a>',
 				esc_url( $this->downloadUrl() ),
-				esc_html__( 'Download', 'Inheritance' )
+				esc_html__( 'Download', 'inheritance' )
 			);
 		}
 
