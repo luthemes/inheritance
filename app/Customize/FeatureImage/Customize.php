@@ -1,11 +1,24 @@
 <?php
+/**
+ * Footer component.
+ *
+ * Integrates the theme's settings into the customizer.
+ *
+ * @package   Inheritance
+ * @author    Benjamin Lu <benlumia007@gmail.com>
+ * @copyright 2022 Benjamin Lu
+ * @license   https://www.gnu.org/licenses/gpl-2.0.html
+ * @link      https://luthemes.com/portfolio/inheritance
+ */
 
 namespace Inheritance\Customize\FeatureImage;
+
 use Inheritance\Customize\Customizable;
-use WP_Customize_Manager;
 use Inheritance\Tools\Collection;
 use Inheritance\Tools\Config;
 use Inheritance\Tools\Mod;
+
+use WP_Customize_Manager;
 
 class Customize extends Customizable {
 
