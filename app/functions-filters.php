@@ -15,6 +15,8 @@ namespace Inheritance;
 
 use Inheritance\Template\ErrorPage;
 use Inheritance\Settings\Options;
+use Inheritance\Tools\Config;
+use Inheritance\Tools\Svg;
 
 /**
  * Change Tempalate Path
@@ -96,3 +98,23 @@ add_filter( 'display_post_states', function( $states, $post ) {
 	return $states;
 
 }, 10, 2 );
+
+add_filter( 'walker_nav_menu_start_el', function( $item_output, $item, $depth, $args ) {
+
+	if ( 'social' === $args->theme_location ) {
+
+		foreach ( Config::get( 'social-icons' ) as $url => $icon ) {
+
+			if ( false !== strpos( $item->url, $url ) ) {
+				$item_output = str_replace(
+					$args->link_before,
+					Svg::render( $icon ) . $args->link_before,
+					$item_output
+				);
+			}
+		}
+	}
+
+	return $item_output;
+
+}, 10, 4 );

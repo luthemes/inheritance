@@ -1,5 +1,10 @@
 # Change Log
 
+## 0.0.5 - 10.04.2024
+
+### Added
+- Support Social Navigation
+
 ## 0.0.4 - 09.04.2024
 
 ### Enhancement
