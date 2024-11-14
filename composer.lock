@@ -59,12 +59,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/backdrop-dev/customize.git",
-                "reference": "de91db27ad94a60b27028973b5984a6caacb2bd0"
+                "reference": "fe9342d7b36b7b39d1fd81149307f510305f5de3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/backdrop-dev/customize/zipball/de91db27ad94a60b27028973b5984a6caacb2bd0",
-                "reference": "de91db27ad94a60b27028973b5984a6caacb2bd0",
+                "url": "https://api.github.com/repos/backdrop-dev/customize/zipball/fe9342d7b36b7b39d1fd81149307f510305f5de3",
+                "reference": "fe9342d7b36b7b39d1fd81149307f510305f5de3",
                 "shasum": ""
             },
             "require": {
@@ -99,7 +99,7 @@
                 "issues": "https://github.com/backdrop-dev/customize/issues",
                 "source": "https://github.com/backdrop-dev/customize/tree/develop"
             },
-            "time": "2024-08-29T20:42:37+00:00"
+            "time": "2024-09-11T05:54:53+00:00"
         },
         {
             "name": "backdrop-dev/fonts",
@@ -308,12 +308,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/backdrop-dev/pagination.git",
-                "reference": "9838e8d503880bd38c193fc13c39d41b9fe50e55"
+                "reference": "9ada431a5a65e18b959305d91877f888f215c872"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/backdrop-dev/pagination/zipball/9838e8d503880bd38c193fc13c39d41b9fe50e55",
-                "reference": "9838e8d503880bd38c193fc13c39d41b9fe50e55",
+                "url": "https://api.github.com/repos/backdrop-dev/pagination/zipball/9ada431a5a65e18b959305d91877f888f215c872",
+                "reference": "9ada431a5a65e18b959305d91877f888f215c872",
                 "shasum": ""
             },
             "require": {
@@ -350,7 +350,7 @@
                 "issues": "https://github.com/backdrop-dev/pagination/issues",
                 "source": "https://github.com/backdrop-dev/pagination/tree/develop"
             },
-            "time": "2024-08-19T17:42:29+00:00"
+            "time": "2024-10-25T15:08:23+00:00"
         },
         {
             "name": "backdrop-dev/template-helpers",
@@ -509,12 +509,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/backdrop-dev/theme.git",
-                "reference": "2c85e65e6cb8a56f298b1618fe634912e5263b46"
+                "reference": "b2430ace7d9ba27077f4bb902eddfc0d2e01af23"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/backdrop-dev/theme/zipball/2c85e65e6cb8a56f298b1618fe634912e5263b46",
-                "reference": "2c85e65e6cb8a56f298b1618fe634912e5263b46",
+                "url": "https://api.github.com/repos/backdrop-dev/theme/zipball/b2430ace7d9ba27077f4bb902eddfc0d2e01af23",
+                "reference": "b2430ace7d9ba27077f4bb902eddfc0d2e01af23",
                 "shasum": ""
             },
             "require": {
@@ -552,7 +552,7 @@
                 "issues": "https://github.com/backdrop-dev/theme/issues",
                 "source": "https://github.com/backdrop-dev/theme/tree/develop"
             },
-            "time": "2024-08-21T21:08:42+00:00"
+            "time": "2024-09-16T00:54:29+00:00"
         },
         {
             "name": "backdrop-dev/tools",
