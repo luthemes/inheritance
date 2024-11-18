@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.0.7 - 11.18.2024
+### Enhancement
+- Updated Description
+
 ## 0.0.6 - 11.14.2024
 ### Ehancement
 - fixed pagination due to php 8.2 and higher
