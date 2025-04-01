@@ -1,11 +1,15 @@
 # Change Log
 
+## 0.0.9 - 04.02.2025
+### Enhancement
+* Update screenshot
+
 ## 0.0.8 - 04.01.2025
 
-## Enhancement
+### Enhancement
 * Add Author to Metadata
 
-## Bug
+### Bug
 * Fixed Featured Image
 
 ## 0.0.7 - 11.18.2024
