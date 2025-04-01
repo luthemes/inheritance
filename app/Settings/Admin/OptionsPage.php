@@ -6,9 +6,9 @@
  *
  * @package   Inheritance
  * @author    Benjamin Lu <benlumia007@gmail.com>
- * @copyright 2024 Benjamin Lu
+ * @copyright 2022 Benjamin Lu
  * @license   https://www.gnu.org/licenses/gpl-2.0.html
- * @link      https://luthemes.com/portfolio/Prismatic
+ * @link      https://luthemes.com/portfolio/inheritance
  */
 
 namespace Inheritance\Settings\Admin;

@@ -4,11 +4,11 @@
  *
  * Displays the general theme settings view (tab) on the settings page.
  *
- * @package   Prismatic
+ * @package   Inheritance
  * @author    Benjamin Lu <benlumia007@gmail.com>
- * @copyright 2024 Benjamin Lu
+ * @copyright 2022 Benjamin Lu
  * @license   https://www.gnu.org/licenses/gpl-2.0.html
- * @link      https://luthemes.com/portfolio/Prismatic
+ * @link      https://luthemes.com/portfolio/inheritance
  */
 
 namespace Inheritance\Settings\Admin\Views;
@@ -65,14 +65,14 @@ class General extends View {
 	public function register() {
 
 		// Get the current plugin settings w/o the defaults.
-		$this->settings = get_option( 'Prismatic_settings' );
+		$this->settings = get_option( 'inheritance_settings' );
 
 		// Register the setting.
-		register_setting( 'Prismatic_settings', 'Prismatic_settings', [ $this, 'validateSettings' ] );
+		register_setting( 'inheritance_settings', 'inheritance_settings', [ $this, 'validateSettings' ] );
 
 		// Register sections and fields.
-		add_action( 'Prismatic/settings/admin/view/general/register', [ $this, 'registerDefaultSections' ] );
-		add_action( 'Prismatic/settings/admin/view/general/register', [ $this, 'registerDefaultFields'   ] );
+		add_action( 'inheritance/settings/admin/view/general/register', [ $this, 'registerDefaultSections' ] );
+		add_action( 'inheritance/settings/admin/view/general/register', [ $this, 'registerDefaultFields'   ] );
 	}
 
 	/**
@@ -84,7 +84,7 @@ class General extends View {
 	 * @return void
 	 */
 	public function boot() {
-		do_action( 'Prismatic/settings/admin/view/general/register' );
+		do_action( 'inheritance/settings/admin/view/general/register' );
 	}
 
 	/**
@@ -137,7 +137,7 @@ class General extends View {
 				$name,
 				$section['label'],
 				[ $this, $section['callback'] ],
-				'Prismatic_settings'
+				'inheritance_settings'
 			);
 
 		}, array_keys( $sections ), $sections );
@@ -185,7 +185,7 @@ class General extends View {
 				$name,
 				$field['label'],
 				[ $this, $field['callback'] ],
-				'Prismatic_settings',
+				'inheritance_settings',
 				$field['section']
 			);
 
@@ -231,7 +231,7 @@ class General extends View {
 	public function fieldErrorPage() {
 
 		$dropdown = wp_dropdown_pages( [
-			'name'              => 'Prismatic_settings[error_page]',
+			'name'              => 'inheritance_settings[error_page]',
 			'show_option_none'  => '-',
 			'option_none_value' => 0,
 			'selected'          => Options::get( 'error_page' ), // phpcs:ignore
@@ -283,7 +283,7 @@ class General extends View {
 
 		<p>
 			<label>
-				<input type="checkbox" name="Prismatic_settings[disable_emoji]" value="true" <?php checked( Options::get( 'disable_emoji' ) ) ?> />
+				<input type="checkbox" name="inheritance_settings[disable_emoji]" value="true" <?php checked( Options::get( 'disable_emoji' ) ) ?> />
 				<?php esc_html_e( 'Disable Emoji Scripts', 'inheritance' ) ?>
 			</label>
 		</p>
@@ -305,7 +305,7 @@ class General extends View {
 
 		<p>
 			<label>
-				<input type="checkbox" name="Prismatic_settings[disable_toolbar]" value="true" <?php checked( Options::get( 'disable_toolbar' ) ) ?> />
+				<input type="checkbox" name="inheritance_settings[disable_toolbar]" value="true" <?php checked( Options::get( 'disable_toolbar' ) ) ?> />
 				<?php esc_html_e( 'Disable Toolbar', 'inheritance' ) ?>
 			</label>
 		</p>
@@ -328,7 +328,7 @@ class General extends View {
 
 		<p>
 			<label>
-				<input type="checkbox" name="Prismatic_settings[disable_wp_embed]" value="true" <?php checked( Options::get( 'disable_wp_embed' ) ) ?> />
+				<input type="checkbox" name="inheritance_settings[disable_wp_embed]" value="true" <?php checked( Options::get( 'disable_wp_embed' ) ) ?> />
 				<?php echo esc_html( $label ); ?>
 			</label>
 		</p>
@@ -349,8 +349,8 @@ class General extends View {
 	public function template() { ?>
 
 		<form method="post" action="options.php">
-			<?php settings_fields( 'Prismatic_settings' ); ?>
-			<?php do_settings_sections( 'Prismatic_settings' ); ?>
+			<?php settings_fields( 'inheritance_settings' ); ?>
+			<?php do_settings_sections( 'inheritance_settings' ); ?>
 			<?php submit_button( esc_attr__( 'Update Settings', 'inheritance' ), 'primary' ); ?>
 		</form>
 
