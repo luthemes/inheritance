@@ -9,7 +9,8 @@
 		<header class="entry-header">
 			<?php Backdrop\Theme\Entry\display_title(); ?>
 			<div class="entry-metadata">
-				<?php Backdrop\Theme\Entry\display_date(); ?>
+				<?php Backdrop\Theme\Entry\display_author(); ?>
+				<?php Backdrop\Theme\Entry\display_date( [ 'before' => Inheritance\Sep() ] ); ?>
 			</div>
 		</header>
 		<div class="entry-content">

@@ -1,18 +1,18 @@
 {
-  "name": "initiator",
+  "name": "inheritance",
   "version": "1.0.0",
-  "description": "Initiator is a WordPress Starter Theme.",
+  "description": "inheritance is a WordPress Starter Theme.",
   "main": "resources/assets/js/app.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/benlumia007/initiator.git"
+    "url": "git+https://github.com/luthemes/inheritance.git"
   },
   "author": "Benjamin Lu",
   "license": "GPL-2.0+",
   "bugs": {
-    "url": "https://github.com/benlumia007/initiator/issues"
+    "url": "https://github.com/luthemes/inheritance/issues"
   },
-  "homepage": "https://github.com/benlumia007/initiator#readme",
+  "homepage": "https://github.com/luthemes/inheritance#readme",
   "scripts": {
     "build": "npm run prod && npm run export",
     "watch": "mix watch",

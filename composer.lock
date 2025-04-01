@@ -509,12 +509,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/backdrop-dev/theme.git",
-                "reference": "b2430ace7d9ba27077f4bb902eddfc0d2e01af23"
+                "reference": "255339b5c2bbcd0965ac675467103988b90f094b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/backdrop-dev/theme/zipball/b2430ace7d9ba27077f4bb902eddfc0d2e01af23",
-                "reference": "b2430ace7d9ba27077f4bb902eddfc0d2e01af23",
+                "url": "https://api.github.com/repos/backdrop-dev/theme/zipball/255339b5c2bbcd0965ac675467103988b90f094b",
+                "reference": "255339b5c2bbcd0965ac675467103988b90f094b",
                 "shasum": ""
             },
             "require": {
@@ -552,7 +552,7 @@
                 "issues": "https://github.com/backdrop-dev/theme/issues",
                 "source": "https://github.com/backdrop-dev/theme/tree/develop"
             },
-            "time": "2024-09-16T00:54:29+00:00"
+            "time": "2025-01-20T23:45:42+00:00"
         },
         {
             "name": "backdrop-dev/tools",
@@ -675,6 +675,6 @@
     "platform": {
         "php": ">=7.4"
     },
-    "platform-dev": [],
+    "platform-dev": {},
     "plugin-api-version": "2.6.0"
 }
