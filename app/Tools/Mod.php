@@ -39,10 +39,7 @@ class Mod {
 
 		$fallback = static::fallback( $name );
 
-		return mod(
-			$name,
-			! $default && ! is_null( $fallback ) ? $fallback : $default
-		);
+		return mod( $name, ! $default && ! is_null( $fallback ) ? $fallback : $default );
 	}
 
 	/**
