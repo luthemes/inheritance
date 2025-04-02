@@ -28,17 +28,14 @@ class Plugin {
     }
 
     protected function fetchWordPressPluginData($slug) {
-        $api = plugins_api(
-            'plugin_information',
-            array(
-                'slug'   => $slug,
-                'fields' => array(
-                    'short_description' => true,
-                    'download_link' => true,
-                    'author' => true,
-                ),
-            )
-        );
+        $api = plugins_api( 'plugin_information', [
+            'slug'   => $slug,
+            'fields' => [
+                'short_description' => true,
+                'download_link' => true,
+                'author' => true,
+            ],
+        ] );
 
         if ( ! is_wp_error( $api ) ) {
             $this->label = $api->name;
