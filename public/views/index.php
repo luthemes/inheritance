@@ -1,10 +1,13 @@
 <?php
 
-// Loads header/*.php templates
-Backdrop\View\display( 'header', Backdrop\Template\Hierarchy\hierarchy() );
+// Access the view template engine.
+$engine = Backdrop\App::resolve( 'view/engine' );
 
-// Loads content/*.php templates
-Backdrop\View\display( 'content', Backdrop\Template\Hierarchy\hierarchy() );
+// Load header/* template.
+$engine->display( 'header', Backdrop\Template\hierarchy() );
 
-// Loads footer/*.php templates
-Backdrop\View\display( 'footer', Backdrop\Template\Hierarchy\hierarchy() );
+// Load content/* template.
+$engine->display( 'content', Backdrop\Template\hierarchy() );
+
+// Load footer/* template.
+$engine->display( 'footer', Backdrop\Template\hierarchy() );
