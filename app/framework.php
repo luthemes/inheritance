@@ -35,6 +35,7 @@ $theme->provider( Backdrop\Mix\Provider::class );
 
 $theme->provider( Inheritance\Provider::class );
 $theme->provider( Inheritance\Customize\Provider::class );
+$theme->provider( Inheritance\Menu\Provider::class );
 $theme->provider( Inheritance\FeatureImage\Provider::class );
 $theme->provider( Inheritance\Settings\Provider::class );
 
