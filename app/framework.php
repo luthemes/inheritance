@@ -38,6 +38,7 @@ $theme->provider( Inheritance\Customize\Provider::class );
 $theme->provider( Inheritance\Menu\Provider::class );
 $theme->provider( Inheritance\FeatureImage\Provider::class );
 $theme->provider( Inheritance\Settings\Provider::class );
+$theme->provider( Inheritance\Sidebar\Provider::class );
 
 # ------------------------------------------------------------------------------
 # Perform bootstrap actions.
