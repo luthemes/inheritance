@@ -17,7 +17,7 @@ namespace Inheritance;
 use Inheritance\Tools\Config;
 
 use function Backdrop\Fonts\enqueue;
-use function Backdrop\Theme\is_classicpress;
+use function Backdrop\is_classicpress;
 
 /**
  * Setup Theme Support.
@@ -64,57 +64,6 @@ add_action( 'after_setup_theme', function() {
 		add_theme_support( 'post-thumbnails' );
 	}
 );
-
-/**
- * Register menus.
- *
- * @since  1.0.0
- * @access public
- * @return void
- */
-add_action( 'init', function() {
-
-	register_nav_menus( [
-		'primary' => esc_html_x( 'Primary', 'nav menu location', 'inheritance' ),
-		'footer'  => esc_html_x( 'Footer',  'nav menu location', 'inheritance' ),
-		'social'  => esc_html_x( 'Social',  'nav menu location', 'inheritance' )
-	] );
-
-}, 5 );
-
-/**
- * Register sidebars.
- *
- * @link   https://developer.wordpress.org/reference/functions/register_sidebar/
- * @link   https://developer.wordpress.org/reference/functions/register_sidebars/
- * @since  1.0.0
- * @access public
- * @return void
- */
-add_action( 'widgets_init', function() {
-
-	$args = [
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>'
-	];
-
-	$sidebars = [
-		[
-			'id' => 'primary',
-			'name' => esc_html__( 'Primary', 'inheritance' )
-		],
-		[
-			'id' => 'subsidiary',
-			'name' => esc_html__( 'Subsidiary', 'inheritance' )
-		]
-	];
-
-	foreach ( $sidebars as $sidebar ) {
-		register_sidebar( array_merge( $sidebar, $args ) );
-	}
-}, 5 );
 
 /**
  * Enqueues specific theme fonts.
