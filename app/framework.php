@@ -25,7 +25,7 @@ $theme = new Backdrop\Core\Application();
 # Here are the default service providers that are essential for the theme to function
 # before booting the application. These service providers form the foundation for the
 # theme.
-// $theme->provider( Backdrop\Customize\Provider::class );
+$theme->provider( Backdrop\Customize\Provider::class );
 $theme->provider( Backdrop\Fonts\Provider::class );
 $theme->provider( Backdrop\Mix\Provider::class );
 
@@ -35,8 +35,8 @@ $theme->provider( Backdrop\Mix\Provider::class );
 
 $theme->provider( Inheritance\Provider::class );
 $theme->provider( Inheritance\Customize\Provider::class );
+$theme->provider( Inheritance\Image\Provider::class );
 $theme->provider( Inheritance\Menu\Provider::class );
-$theme->provider( Inheritance\FeatureImage\Provider::class );
 $theme->provider( Inheritance\Settings\Provider::class );
 $theme->provider( Inheritance\Sidebar\Provider::class );
 
