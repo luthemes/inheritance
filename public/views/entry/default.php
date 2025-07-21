@@ -6,14 +6,15 @@
 				<?php the_post_thumbnail( 'inheritance-landscape-medium' ); ?>
 			</picture>
 		<?php } ?>
-		<header class="entry-header">
-			<?php Backdrop\Theme\Entry\display_title(); ?>
-			<div class="entry-metadata">
-				<?php Backdrop\Theme\Entry\display_author(); ?>
-				<?php Backdrop\Theme\Entry\display_date( [ 'before' => Inheritance\Sep() ] ); ?>
+		<header class="entry__header">
+			<?php Backdrop\Post\display_title(); ?>
+			<div class="entry__metadata">
+				<?php Backdrop\Post\display_author(); ?>
+				<?php Backdrop\Post\display_date( [ 'before' => Inheritance\Sep() ] ); ?>
+				<?php Backdrop\Post\display_comments_link( [ 'before' => Inheritance\Sep() ] ); ?>
 			</div>
 		</header>
-		<div class="entry-content">
+		<div class="entry__content">
 			<?php the_excerpt(); ?>
 		</div>
 	</article>

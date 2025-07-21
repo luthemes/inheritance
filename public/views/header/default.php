@@ -13,7 +13,7 @@
 	<header id="masthead" class="site-header">
 		<div class="branding-navigation">
 			<div class="site-branding">
-				<?php Backdrop\Theme\Site\display_site_title(); ?>
+				<?php Backdrop\Site\display_title(); ?>
 				<?php
 					$tagline = get_bloginfo( 'description' );
 
@@ -22,7 +22,7 @@
 							<span class="sep" aria-hidden="true"><?php echo esc_html( $sep ) ?></span>
 						<?php endif;
 
-						Backdrop\Theme\Site\display_site_description();
+						Backdrop\Site\display_description();
 					}
 				?>
 			</div>

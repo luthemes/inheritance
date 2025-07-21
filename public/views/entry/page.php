@@ -1,6 +1,6 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php Backdrop\Theme\Entry\display_title(); ?>
+		<?php Backdrop\Post\display_title(); ?>
 	</header>
 	<div class="entry-container">
 		<div class="story-content">
