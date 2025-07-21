@@ -4,21 +4,15 @@
  *
  * A simple class for returning or outputting an SVG file.
  *
- * @package   Amicable
+ * @package   Inheritance
  * @author    Benjamin Lu <benlumia007@gmail.com>
- * @copyright 2024 Benjamin Lu
+ * @copyright 2022 Benjamin Lu
  * @license   https://www.gnu.org/licenses/gpl-2.0.html
- * @link      https://luthemes.com/portfolio/amicable
+ * @link      https://luthemes.com/portfolio/inheritance
  */
 
 namespace Inheritance\Tools;
 
-/**
- * SVG class.
- *
- * @since  1.0.0
- * @access public
- */
 class Svg {
 
 	/**
@@ -26,14 +20,14 @@ class Svg {
 	 *
 	 * @since  1.0.0
 	 * @access public
+	 * @param  string  $group
 	 * @param  string  $name
 	 * @return string
 	 */
-	public static function render( $name ) {
+	public static function render( $group, $name ) {
+		$svg = file_get_contents( static::path( $group, "{$name}.svg" ) );
 
-		$svg = file_get_contents( static::path( "{$name}.svg" ) );
-
-		return apply_filters( "inheritance/svg/{$name}", $svg ?: '' );
+		return apply_filters( "inheritance/svg/{$group}/{$name}", $svg ?: '' );
 	}
 
 	/**
@@ -41,12 +35,12 @@ class Svg {
 	 *
 	 * @since  1.0.0
 	 * @access public
+	 * @param  string  $group
 	 * @param  string  $name
 	 * @return void
 	 */
-	public static function display( $name ) {
-
-		echo static::render( $name ); // phpcs:ignore
+	public static function display( $group, $name ) {
+		echo static::render( $group, $name ); //phpcs:ignore
 	}
 
 	/**
@@ -54,12 +48,14 @@ class Svg {
 	 *
 	 * @since  1.0.0
 	 * @access public
+	 * @param  string  $group
+	 * @param  string  $file
 	 * @return string
 	 */
-	public static function path( $file = '' ) {
+	public static function path( $group, $file = '' ) {
+		$group = trim( $group, '/' );
+		$file  = trim( $file, '/' );
 
-		$file = trim( $file, '/' );
-
-		return get_theme_file_path( $file ? "public/svg/{$file}" : 'public/svg' );
+		return get_theme_file_path( "public/svg/{$group}/{$file}" );
 	}
 }
