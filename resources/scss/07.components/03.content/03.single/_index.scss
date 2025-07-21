@@ -2,11 +2,15 @@
     .content-area {
         line-height: 1.7rem;
 
-        .entry-header {
+        .entry {
 
-            .entry-metadata {
-                font-size: 14px;
-                margin-top: 0.5rem;
+            &__header {
+
+            }
+
+            &__title {
+                margin: 0;
+                padding: 0;
             }
         }
 

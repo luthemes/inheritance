@@ -1,5 +1,12 @@
 # Change Log
 
+## 0.1.0 - 07.21.2025
+### Enhancement
+* Reorganized code for Featured Image
+
+### Bug
+* Fixed minor styles
+
 ## 0.0.9 - 04.02.2025
 ### Enhancement
 * Update screenshot

@@ -344,18 +344,25 @@
                                 margin-bottom: 0.5rem;
                             }
                         }
-    
-                        .entry-header {
-    
-                            .entry-title {
+
+                        .entry {
+
+                            text-align: center;
+
+                            &__title {
+                                font-size: 1.7rem;
                                 margin: 0;
                                 padding: 0;
                             }
 
-                            .entry-metadata {
+                            &__metadata {
                                 font-size: 14px;
                                 margin: 0;
                                 padding: 0;
+                            }
+
+                            &__content {
+                                margin-top: 1rem;
                             }
                         }
                     }
