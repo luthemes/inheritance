@@ -4,55 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c19a9ef5ccaa33f486e1d41e9860ef81",
+    "content-hash": "ab34ba856fa7cc8c4f01079010337ba0",
     "packages": [
-        {
-            "name": "backdrop-dev/customize",
-            "version": "dev-new-component",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/backdrop-dev/customize.git",
-                "reference": "75ae91e154c22cf8c5e1261c67fc47e22674cbd4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/backdrop-dev/customize/zipball/75ae91e154c22cf8c5e1261c67fc47e22674cbd4",
-                "reference": "75ae91e154c22cf8c5e1261c67fc47e22674cbd4",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.1"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Backdrop\\Customize\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Benjamin Lu",
-                    "email": "benlumia007@gmail.com",
-                    "homepage": "https://benjlu.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Additional ClassicPress and WordPress theme customizer for Backdrop framework.",
-            "homepage": "https://github.com/backdrop-dev/customize",
-            "keywords": [
-                "classicpress",
-                "wordpress"
-            ],
-            "support": {
-                "issues": "https://github.com/backdrop-dev/customize/issues",
-                "source": "https://github.com/backdrop-dev/customize/tree/new-component"
-            },
-            "time": "2025-05-16T17:58:14+00:00"
-        },
         {
             "name": "backdrop-dev/fonts",
             "version": "dev-develop",
@@ -107,12 +60,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/backdrop-dev/framework.git",
-                "reference": "9e6478829239a3b7364a5ccb823e29aaa50135f2"
+                "reference": "2be516677090b323d9c49a022b9e8e4115477999"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/backdrop-dev/framework/zipball/9e6478829239a3b7364a5ccb823e29aaa50135f2",
-                "reference": "9e6478829239a3b7364a5ccb823e29aaa50135f2",
+                "url": "https://api.github.com/repos/backdrop-dev/framework/zipball/2be516677090b323d9c49a022b9e8e4115477999",
+                "reference": "2be516677090b323d9c49a022b9e8e4115477999",
                 "shasum": ""
             },
             "require": {
@@ -149,7 +102,7 @@
                 "issues": "https://github.com/backdrop-dev/framework/issues",
                 "source": "https://github.com/backdrop-dev/framework/tree/1.0"
             },
-            "time": "2025-05-18T23:21:52+00:00"
+            "time": "2025-07-23T15:34:52+00:00"
         },
         {
             "name": "backdrop-dev/mix",
@@ -207,7 +160,6 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "backdrop-dev/customize": 20,
         "backdrop-dev/fonts": 20,
         "backdrop-dev/framework": 20,
         "backdrop-dev/mix": 20
