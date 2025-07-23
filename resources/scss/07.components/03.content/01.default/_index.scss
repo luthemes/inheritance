@@ -359,6 +359,12 @@
                                 font-size: 14px;
                                 margin: 0;
                                 padding: 0;
+
+                                svg {
+                                    height: 15px;
+                                    width: 15px;
+                                    margin: 0 .25rem;
+                                }
                             }
 
                             &__content {

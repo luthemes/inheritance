@@ -9,9 +9,9 @@
 		<header class="entry__header">
 			<?php Backdrop\Post\display_title(); ?>
 			<div class="entry__metadata">
-				<?php Backdrop\Post\display_author(); ?>
-				<?php Backdrop\Post\display_date( [ 'before' => Inheritance\Sep() ] ); ?>
-				<?php Backdrop\Post\display_comments_link( [ 'before' => Inheritance\Sep() ] ); ?>
+				<?php Backdrop\Post\display_author( [ 'before' => Inheritance\Tools\Svg::display( 'meta-icons', 'user' ) ] ); ?>
+				<?php Backdrop\Post\display_date( [ 'before' => Inheritance\Tools\Svg::display( 'meta-icons', 'calendar' ) ] ); ?>
+				<?php Backdrop\Post\display_comments_link( [ 'before' => Inheritance\Tools\Svg::display( 'meta-icons', 'comment' ) ] ); ?>
 			</div>
 		</header>
 		<div class="entry__content">
