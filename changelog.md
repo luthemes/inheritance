@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.1.1 - 11.11.2025
+### Enhancement
+* Re-design home/blog section only 
+
 ## 0.1.0 - 07.21.2025
 ### Enhancement
 * Reorganized code for Featured Image
