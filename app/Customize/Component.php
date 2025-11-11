@@ -21,7 +21,7 @@ use Inheritance\Tools\Config;
 use Inheritance\Tools\Collection;
 
 use WP_Customize_Manager;
-use function Backdrop\Mix\asset;
+use function Inheritance\Vite\asset;
 /**
  * Handles setting up everything we need for the customizer.
  *
