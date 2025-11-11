@@ -9,10 +9,10 @@
 
 @media screen and ( max-width: 768px ) {
     .menu-toggle {
-        background: color( black );
+        background: #000000;
         border: none;
         bottom: 1.125rem;
-        color: color( white );
+        color: #ffffff;
         font-family: font-family( primary );
         left: 1.125rem;
         padding: 0.5rem 1rem;
@@ -27,7 +27,7 @@
 
 		&.toggled {
 			.menu-items {
-				background: color( black );
+				background: #000000;
 				display: block;
 				bottom: 3.5rem;
 				left: 1.25rem;
@@ -42,7 +42,7 @@
 					padding: 0.7rem;
 
 					a {
-						color: color( white );
+						color: #ffffff;
 						text-decoration: none;
 					}
 
@@ -55,7 +55,7 @@
 						right: 1.250rem;
 		
 						.fontawesome {
-							color: color( white );
+							color: #ffffff;
 							font-family: 'Font Awesome 5 Free';
 							font-size: 1.125rem;
 		
@@ -83,7 +83,7 @@
 							right: 1.250rem;
 			
 							.fontawesome {
-								color: color( white );
+								color: #ffffff;
 								font-family: 'Font Awesome 5 Free';
 								font-size: 1.25rem;
 			
@@ -130,7 +130,7 @@
 				width: max-content;
 
 				&:hover {
-					color: color( white );
+					color: #ffffff;
 					text-decoration: underline;
 					text-decoration-thickness: 2px;
 					text-underline-offset: 4px;
@@ -140,7 +140,7 @@
 					> {
 						a {
 							&:after {
-								color: color( black );
+								color: #000000;
 								content: "\f078";
 								font-family: 'Font Awesome 5 Free';
 								text-decoration: none;
@@ -152,7 +152,7 @@
 
 				&.current-menu-item {
 					a {
-						color: color( black );
+						color: #000000;
 						padding: 0.5rem 1rem;
 						text-decoration: underline;
 						text-decoration-thickness: 2px;
@@ -173,7 +173,7 @@
 				}
 
 				a {
-					color: color( black );
+					color: #000000;
 					padding: 0.5rem 1rem;
 					text-decoration: none;
 				}
@@ -183,7 +183,7 @@
 				}
 
 				.sub-menu {
-					background: color( black );
+					background: #000000;
 					left: 0;
 					list-style-type: none;
 					margin: 0.7rem 0;
@@ -199,7 +199,7 @@
 						padding: 0.5rem;
 
 						a {
-							color: color( white );
+							color: #ffffff;
 						}
 
 						&:last-child {

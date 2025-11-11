@@ -7,8 +7,8 @@
 // @author    Benjamin Lu ( https://getbenonit.com )
 //
 
-@import 'header/index';
-@import 'content/index';
-@import 'comments/index';
-@import 'aside/index';
-@import 'footer/index';
+@forward 'header/index';
+@forward 'content/index';
+@forward 'comments/index';
+@forward 'aside/index';
+@forward 'footer/index';

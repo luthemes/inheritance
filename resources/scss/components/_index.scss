@@ -7,5 +7,5 @@
 // @author    Benjamin Lu ( https://getbenonit.com )
 //
 
-@import 'contents/index';
-@import 'navigations/index';
+@forward 'contents/index';
+@forward 'navigations/index';

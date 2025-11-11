@@ -1,4 +1,4 @@
-@import '01.default/index';
-@import '02.page/index';
-@import '03.single/index';
-@import '04.archive/index';
+@forward '01.default/index';
+@forward '02.page/index';
+@forward '03.single/index';
+@forward '04.archive/index';

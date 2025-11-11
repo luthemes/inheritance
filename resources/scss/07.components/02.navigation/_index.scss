@@ -1,3 +1,3 @@
-@import '01.menu/index';
-@import '02.pagination';
-@import '03.social';
+@forward '01.menu/index';
+@forward '02.pagination';
+@forward '03.social';

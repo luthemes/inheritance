@@ -16,7 +16,7 @@
 //
 // Settings handle the configuration and variables.
 
-@import 'settings/index';
+@forward 'settings/index';
 
 // -----------------------------------------------------------------------------
 // Import tools.
@@ -25,7 +25,7 @@
 // These are used throughout the code but don't output CSS on their own. Things
 // like functions, mixins, and extensions go here.
 
-@import 'tools/index';
+@forward 'tools/index';
 
 // -----------------------------------------------------------------------------
 // Import generic styles.
@@ -35,7 +35,7 @@
 // fonts, etc. are best handled here. These are the base styles that other
 // styles will build upon.
 
-@import 'generic/index';
+@forward 'generic/index';
 
 // -----------------------------------------------------------------------------
 // Import element styles.
@@ -45,7 +45,7 @@
 // The styles in this folder should only handle the defaults. More specific
 // styles should be handled later in the cascade.
 
-@import 'elements/index';
+@forward 'elements/index';
 
 // -----------------------------------------------------------------------------
 // Import object styles.
@@ -53,7 +53,7 @@
 //
 // Undecorated design patterns.
 
-@import 'objects/index';
+@forward 'objects/index';
 
 // -----------------------------------------------------------------------------
 // Import component styles.
@@ -63,7 +63,7 @@
 // fonts, etc. are best handled here. These are the base styles that other
 // styles will build upon.
 
-@import 'components/index';
+@forward 'components/index';
 
 // -----------------------------------------------------------------------------
 // Import block styles.
@@ -71,7 +71,7 @@
 //
 // Imports global block styles.
 
-@import 'blocks/index';
+@forward 'blocks/index';
 
 // -----------------------------------------------------------------------------
 // Import utility styles.
@@ -81,4 +81,4 @@
 // necessary, this is the only place where `!important` rules should go, but
 // only if necessary.
 
-@import 'utilities/index';
+@forward 'utilities/index';

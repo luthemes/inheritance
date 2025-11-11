@@ -5,6 +5,7 @@
 /// @author Benjamin Lu <benlumia007@gmail.com>
 /// @link   https://github.com/benlumia007/benlu
 ////
+@use 'sass:map';
 
 /// Returns a map of font families in name-value format.
 ///
@@ -31,5 +32,5 @@
 
 @function font-family( $name ) {
 
-	@return map-get( font-families(), $name );
+	@return map.get( font-families(), $name );
 }

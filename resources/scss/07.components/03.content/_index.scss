@@ -1,3 +1,3 @@
-@import '01.default/index';
-@import '02.comments/index';
-@import '03.single';
+@forward '01.default/index';
+@forward '02.comments/index';
+@forward '03.single';

@@ -7,5 +7,5 @@
 // @author    Benjamin Lu ( https://getbenonit.com )
 //
 
-@import 'a11y/index';
-@import 'alignments/index';
+@forward 'a11y/index';
+@forward 'alignments/index';
