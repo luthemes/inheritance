@@ -316,64 +316,124 @@
 
 
 @media screen and ( min-width: 961px ) {
-    .blog {
-        .content-area {
-            line-height: 1.7rem;
-    
-            .loop {
-                
-                .grid-items {
-                    display: grid;
-                    list-style-type: none;
-                    margin: 0;
-                    padding: 0;
-    
-                    &.grid-col-3 {
-                        grid-template-columns: 1fr 1fr 1fr;
-                    }
-                    
-                    .grid-item {
-                        margin: 0;
-                        padding: 1.125rem;
-    
-                        .post-thumbnail {
-                            .size-inheritance-landscape-medium {
-                                border-radius: 0.5rem;
-                                box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
-                                display: block;
-                                margin-bottom: 0.5rem;
-                            }
-                        }
+  .blog {
+    .content-area {
+      line-height: 1.7rem;
 
-                        .entry {
+      .loop {
+        .grid-items {
+          display: grid;
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
 
-                            text-align: center;
+          /* spacing + consistent track sizing */
+          gap: 24px;
+          grid-auto-rows: auto;
 
-                            &__title {
-                                font-size: 1.7rem;
-                                margin: 0;
-                                padding: 0;
-                            }
+          &.grid-col-3 {
+            grid-template-columns: 1fr 1fr 1fr;
+          }
 
-                            &__metadata {
-                                font-size: 14px;
-                                margin: 0;
-                                padding: 0;
+          .grid-item {
+            /* remove padding here so gap controls spacing */
+            margin: 0;
+            padding: 0;
 
-                                svg {
-                                    height: 15px;
-                                    width: 15px;
-                                    margin: 0 .25rem;
-                                }
-                            }
-
-                            &__content {
-                                margin-top: 1rem;
-                            }
-                        }
-                    }
-                }
+            /* card container */
+            > article {
+              display: flex;
+              flex-direction: column;
+              height: 100%;
+              border: 1px solid #e6e6e6;
+              border-radius: 0.75rem;
+              background: #fff;
+              box-shadow: 0 1px 2px rgba(0,0,0,.05);
+              overflow: hidden;
             }
+
+            /* FEATURED: big tile on the left */
+            &.is-featured {
+              grid-row: span 2;
+
+              .post-thumbnail {
+                display: block;
+              }
+            }
+
+            /* NON-FEATURED: no image (like the screenshot) */
+            &:not(.is-featured) .post-thumbnail { display: none; }
+
+            .post-thumbnail {
+              /* keep your medium size styling */
+              .size-inheritance-landscape-medium {
+                border-radius: 0; /* radius now on the article */
+                box-shadow: none; /* shadow now on the article */
+                display: block;
+                margin: 0;
+              }
+              img {
+                width: 100%;
+                height: auto;
+                aspect-ratio: 16/9;
+                object-fit: cover;
+                display: block;
+              }
+            }
+
+            .entry {
+              /* screenshot is left-aligned */
+              text-align: left;
+              padding: 1.125rem;
+              display: flex;
+              flex-direction: column;
+              gap: .5rem;
+
+              &__title {
+                font-size: 1.7rem;
+                margin: 0;
+                padding: 0;
+                line-height: 1.2;
+              }
+
+              &__metadata {
+                font-size: 14px;
+                margin: 0;
+                padding: 0;
+                color: #666;
+                display: flex;
+                gap: .75rem;
+                align-items: center;
+
+                svg {
+                  height: 15px;
+                  width: 15px;
+                  margin: 0 .25rem 0 0;
+                }
+              }
+
+              &__content {
+                /* push excerpt down, clamp lines for even-ish height */
+                margin-top: .25rem;
+
+                p {
+                  margin: 0;
+                  display: -webkit-box;
+                  -webkit-line-clamp: 3;
+                  -webkit-box-orient: vertical;
+                  overflow: hidden;
+                  color: #444;
+                }
+              }
+            }
+          }
         }
+      }
     }
+  }
+}
+
+/* Mobile/tablet: don’t force the big span */
+@media screen and (max-width: 960px) {
+  .blog .content-area .loop .grid-items .grid-item.is-featured { grid-row: auto; }
 }
