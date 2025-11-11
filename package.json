@@ -18,7 +18,9 @@
     "vite": "^7.2.1"
   },
   "scripts": {
+    "build": "npm run prod && npm run export",
     "watch": "vite build --watch",
-    "build": "vite build"
+    "prod": "vite build",
+    "export": "node export-theme.js"
   }
 }
