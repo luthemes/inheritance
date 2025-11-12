@@ -60,12 +60,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/backdrop-dev/framework.git",
-                "reference": "2be516677090b323d9c49a022b9e8e4115477999"
+                "reference": "516309bf0fc303ab73e9fd56884284dfd67c11cc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/backdrop-dev/framework/zipball/2be516677090b323d9c49a022b9e8e4115477999",
-                "reference": "2be516677090b323d9c49a022b9e8e4115477999",
+                "url": "https://api.github.com/repos/backdrop-dev/framework/zipball/516309bf0fc303ab73e9fd56884284dfd67c11cc",
+                "reference": "516309bf0fc303ab73e9fd56884284dfd67c11cc",
                 "shasum": ""
             },
             "require": {
@@ -102,7 +102,7 @@
                 "issues": "https://github.com/backdrop-dev/framework/issues",
                 "source": "https://github.com/backdrop-dev/framework/tree/1.0"
             },
-            "time": "2025-07-23T15:34:52+00:00"
+            "time": "2025-11-12T19:40:09+00:00"
         },
         {
             "name": "backdrop-dev/mix",
@@ -110,12 +110,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/backdrop-dev/mix.git",
-                "reference": "d06867563d0bc137773976ba7d6259fa5623fce5"
+                "reference": "60e8c47cd6ed7d9ea76462823ca2fe874ad0cf88"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/backdrop-dev/mix/zipball/d06867563d0bc137773976ba7d6259fa5623fce5",
-                "reference": "d06867563d0bc137773976ba7d6259fa5623fce5",
+                "url": "https://api.github.com/repos/backdrop-dev/mix/zipball/60e8c47cd6ed7d9ea76462823ca2fe874ad0cf88",
+                "reference": "60e8c47cd6ed7d9ea76462823ca2fe874ad0cf88",
                 "shasum": ""
             },
             "require": {
@@ -153,7 +153,7 @@
                 "issues": "https://github.com/backdrop-dev/mix/issues",
                 "source": "https://github.com/backdrop-dev/mix/tree/develop"
             },
-            "time": "2024-07-17T18:43:56+00:00"
+            "time": "2025-11-07T00:16:32+00:00"
         }
     ],
     "packages-dev": [],

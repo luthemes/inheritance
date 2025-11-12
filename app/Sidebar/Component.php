@@ -52,7 +52,7 @@ class Component implements Bootable {
 	 * @access public
 	 * @return void
 	 */
-	public function boot() {
+	public function boot(): void {
 
 		// Register sidebars on `widgets_init`.
 		add_action( 'widgets_init', [ $this, 'register' ] );

@@ -52,7 +52,7 @@ class Component implements Bootable {
 	 * @access public
 	 * @return void
 	 */
-	public function boot() {
+	public function boot(): void {
 
 		// Register menus on `after_setup_theme`.
 		add_action( 'after_setup_theme', [ $this, 'register' ] );
