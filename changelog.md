@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.1.2 - 03.02.2026
+### Bug
+* Fixed Metadata spacing
+
 ## 0.1.1 - 11.11.2025
 ### Enhancement
 * Re-design home/blog section only 
