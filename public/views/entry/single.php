@@ -1,7 +1,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry__header">
 		<?php Backdrop\Post\display_title(); ?>
-		<div class="entry-metadata">
+		<div class="entry__metadata">
 			<?php Backdrop\Post\display_author(); ?>
 			<?php Backdrop\Post\display_date( [ 'before' => Inheritance\Sep() ] ); ?>
 		</div>
