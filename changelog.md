@@ -11,6 +11,7 @@
 
 ### Enhancement
 * Removed the Footer Sidebar widget area, which was registered but never displayed
+* Removed the empty sidebar from pages and centered page content
 * Updated Backdrop framework to the `develop` branch
 * Renamed leftover `momentum/` hooks to `inheritance/`; the old names still work but are deprecated
 * Renamed the `inheritance/config/{$name}/` filter to `inheritance/config/{$name}`; the old name still works but is deprecated
