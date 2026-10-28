@@ -1,5 +1,12 @@
 .single-page {
 
+	// Pages have no sidebar, so let the content use the full width
+	// instead of the two-column split from the default layout.
+	.site-content .entry-container .story-content {
+		float: none;
+		width: auto;
+	}
+
 	.content-area {
 		line-height: 1.7rem;
 

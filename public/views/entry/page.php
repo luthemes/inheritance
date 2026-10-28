@@ -18,6 +18,5 @@
 				<?php comments_template(); ?>
 			</div>	
 		</div>
-		<?php Backdrop\View\display( 'sidebar', 'subsidiary', [ 'sidebar' => 'subsidiary'] ); ?>
 	</div>
 </article>
