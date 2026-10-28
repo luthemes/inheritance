@@ -1,6 +1,6 @@
 # Change Log
 
-## 0.1.3 - Unreleased
+## 0.1.3 - 10.28.2026
 ### Bug
 * Fixed fatal error on category, tag, author and date archives
 * Fixed fatal error in the social menu when a link matched an icon
