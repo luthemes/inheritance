@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ab34ba856fa7cc8c4f01079010337ba0",
+    "content-hash": "5f6455f35041fd78015b09f1502c33be",
     "packages": [
         {
             "name": "backdrop-dev/fonts",
@@ -56,21 +56,22 @@
         },
         {
             "name": "backdrop-dev/framework",
-            "version": "1.0.x-dev",
+            "version": "dev-develop",
             "source": {
                 "type": "git",
                 "url": "https://github.com/backdrop-dev/framework.git",
-                "reference": "41aad0f7485a44e2e13eab88a0060e815bb98314"
+                "reference": "7989430268cc98d99a993e0e6bd6f11d3f418a8a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/backdrop-dev/framework/zipball/41aad0f7485a44e2e13eab88a0060e815bb98314",
-                "reference": "41aad0f7485a44e2e13eab88a0060e815bb98314",
+                "url": "https://api.github.com/repos/backdrop-dev/framework/zipball/7989430268cc98d99a993e0e6bd6f11d3f418a8a",
+                "reference": "7989430268cc98d99a993e0e6bd6f11d3f418a8a",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.4"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "files": [
@@ -92,7 +93,7 @@
                     "role": "Developer"
                 }
             ],
-            "description": "Backdrop Framework: A framework for developing ClassicPress and WordPress themes and plugins.",
+            "description": "Backdrop Framework: A framework for developing ClassicPress and WordPress themes.",
             "homepage": "https://benjlu.com/project/backdrop-dev",
             "keywords": [
                 "classicpress",
@@ -100,9 +101,9 @@
             ],
             "support": {
                 "issues": "https://github.com/backdrop-dev/framework/issues",
-                "source": "https://github.com/backdrop-dev/framework/tree/1.0"
+                "source": "https://github.com/backdrop-dev/framework/tree/develop"
             },
-            "time": "2025-11-13T15:58:15+00:00"
+            "time": "2026-10-27T06:32:46+00:00"
         },
         {
             "name": "backdrop-dev/mix",
