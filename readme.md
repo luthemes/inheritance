@@ -20,7 +20,7 @@ Inheritance is a modern starter theme for ClassicPress, built on [Backdrop Core]
 ## Requirements
 
 - ClassicPress 2.0 or higher
-- PHP 7.4 or higher
+- PHP 8.0 or higher
 
 For development you will also need:
 
