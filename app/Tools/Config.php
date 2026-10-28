@@ -34,7 +34,10 @@ class Config {
 
 		$file = static::path( "{$name}.php" );
 
-		return ( array ) apply_filters( "inheritance/config/{$name}/", file_exists( $file ) ? include( $file ) : [] );
+		$config = apply_filters( "inheritance/config/{$name}", file_exists( $file ) ? include( $file ) : [] );
+
+		// Deprecated filter name with a trailing slash, kept for child themes that still use it.
+		return ( array ) apply_filters_deprecated( "inheritance/config/{$name}/", [ $config ], '0.1.3', "inheritance/config/{$name}" );
 	}
 
 	/**

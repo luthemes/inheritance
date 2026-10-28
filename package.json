@@ -1,7 +1,7 @@
 {
   "name": "inheritance",
   "version": "1.0.0",
-  "description": "inheritance is a WordPress Starter Theme.",
+  "description": "Inheritance is a ClassicPress starter theme.",
   "main": "resources/assets/js/app.js",
   "repository": {
     "type": "git",

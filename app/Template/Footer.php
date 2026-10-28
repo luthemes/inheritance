@@ -73,7 +73,7 @@ class Footer {
 			'a'       => [ 'href' => true, 'title' => true, 'class' => true ],
 			'abbr'    => [ 'title' => true ],
 			'acronym' => [ 'title' => true ],
-			'bold'    => [ 'class' => true ],
+			'b'       => [ 'class' => true ],
 			'code'    => [ 'class' => true ],
 			'em'      => [ 'class' => true ],
 			'i'       => [ 'class' => true ],

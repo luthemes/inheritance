@@ -62,7 +62,7 @@ class Component implements Bootable {
 		add_action( 'init', [ $this, 'register' ], 5 );
 
 		// Register default sizes.
-		add_action( 'momentum/image/size/register', [ $this, 'registerDefaultSizes' ] );
+		add_action( 'inheritance/image/size/register', [ $this, 'registerDefaultSizes' ] );
 
 		// Filter the image size names in the editor.
 		add_filter( 'image_size_names_choose', [ $this, 'imageSizeNamesChoose' ] );
@@ -81,7 +81,10 @@ class Component implements Bootable {
 	public function register() {
 
 		// Hook for registering custom image sizes.
-		do_action( 'momentum/image/size/register', $this->sizes );
+		do_action( 'inheritance/image/size/register', $this->sizes );
+
+		// Deprecated hook name, kept for child themes that still use it.
+		do_action_deprecated( 'momentum/image/size/register', [ $this->sizes ], '0.1.3', 'inheritance/image/size/register' );
 
 		// Registers image sizes with WordPress.  Note that the
 		// `post-thumbnail` size should be properly register with the

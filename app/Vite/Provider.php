@@ -22,7 +22,7 @@ use Backdrop\Core\ServiceProvider;
 class Provider extends ServiceProvider {
 
 	/**
-	 * Callback executed when the `\Hybrid\Core\Application` class registers
+	 * Callback executed when the `Backdrop\Core\Application` class registers
 	 * providers. Use this method to bind items to the container.
 	 *
 	 * @since  1.0.0
@@ -31,7 +31,7 @@ class Provider extends ServiceProvider {
 	 */
     public function register(): void {
 
-        // Bind the Laravel Mix manifest for cache-busting.
+        // Bind the Vite manifest for cache-busting.
         $this->app->singleton( 'inheritance/vite/parent', function() {
 
             $file = get_template_directory() . '/' . 'public/assets/manifest.json';

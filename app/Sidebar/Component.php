@@ -58,7 +58,7 @@ class Component implements Bootable {
 		add_action( 'widgets_init', [ $this, 'register' ] );
 
 		// Register default sidebars.
-		add_action( 'momentum/core/sidebar/register', [ $this, 'registerDefaultSidebars' ] );
+		add_action( 'inheritance/sidebar/register', [ $this, 'registerDefaultSidebars' ] );
 	}
 
 	/**
@@ -71,7 +71,10 @@ class Component implements Bootable {
 	public function register() {
 
 		// Hook for registering custom sidebars.
-		do_action( 'momentum/core/sidebar/register', $this->sidebars );
+		do_action( 'inheritance/sidebar/register', $this->sidebars );
+
+		// Deprecated hook name, kept for child themes that still use it.
+		do_action_deprecated( 'momentum/core/sidebar/register', [ $this->sidebars ], '0.1.3', 'inheritance/sidebar/register' );
 
 		// Loop through the collection and register each sidebar.
 		foreach ( $this->sidebars->all() as $sidebar ) {

@@ -15,8 +15,6 @@ namespace Inheritance\Template;
 
 use Inheritance\Settings\Options;
 
-use function Backdrop\Theme\Entry\render_title;
-
 /**
  * Error page class.
  *

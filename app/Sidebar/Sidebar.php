@@ -109,10 +109,18 @@ class Sidebar implements JsonSerializable {
 	 */
 	public function name() {
 
-		return apply_filters(
-			"momentum/sidebar/{$this->id}/name",
+		$name = apply_filters(
+			"inheritance/sidebar/{$this->id}/name",
 			$this->name ?: $this->id(),
 			$this
+		);
+
+		// Deprecated filter name, kept for child themes that still use it.
+		return apply_filters_deprecated(
+			"momentum/sidebar/{$this->id}/name",
+			[ $name, $this ],
+			'0.1.3',
+			"inheritance/sidebar/{$this->id}/name"
 		);
 	}
 
