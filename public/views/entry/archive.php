@@ -7,10 +7,10 @@
 			</picture>
 		<?php } ?>
 		<header class="entry-header">
-			<?php Backdrop\Theme\Entry\display_title(); ?>
+			<?php Backdrop\Post\display_title(); ?>
 			<div class="entry-metadata">
-				<?php Backdrop\Theme\Entry\display_author(); ?>
-				<?php Backdrop\Theme\Entry\display_date( [ 'before' => Inheritance\Sep() ] ); ?>
+				<?php Backdrop\Post\display_author(); ?>
+				<?php Backdrop\Post\display_date( [ 'before' => Inheritance\sep() ] ); ?>
 			</div>
 		</header>
 		<div class="entry-content">
