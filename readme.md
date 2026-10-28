@@ -12,7 +12,6 @@ Inheritance is a modern starter theme for ClassicPress, built on [Backdrop Core]
 - Custom logo, header, background and colors
 - Custom menus, including social navigation and a bottom-corner mobile menu
 - Featured images and custom image sizes
-- Footer widgets
 - Post formats, sticky posts and threaded comments
 - Theme options page
 - Translation ready (text domain: `inheritance`)

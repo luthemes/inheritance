@@ -2,7 +2,7 @@
 Contributors: benlumia007
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: grid-layout, left-sidebar, one-column, right-sidebar, two-columns, custom-background, custom-colors, custom-header, custom-logo, custom-menu, featured-images, footer-widgets, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, blog
+Tags: grid-layout, left-sidebar, one-column, right-sidebar, two-columns, custom-background, custom-colors, custom-header, custom-logo, custom-menu, featured-images, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, blog
 
 == Description ==
 Welcome to Inheritance ClassicPress theme. Inheritance is a fully functional mobile friendly ClassicPress theme. 

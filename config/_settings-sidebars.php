@@ -18,8 +18,4 @@ return [
         'name'        => esc_html__( 'Primary Sidebar', 'inheritance' ),
         'description' => 'The main sidebar for widgets alongside primary content.'
     ],
-    'footer' => [
-        'name'        => 'Footer Sidebar',
-        'description' => 'A widget area displayed in the footer section of the site.'
-    ],
 ];
