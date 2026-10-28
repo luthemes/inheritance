@@ -28,7 +28,7 @@ return [
 	'foursquare.com'  => 'foursquare',
 	'getpocket.com'   => 'getpocket',
 	'github.com'      => 'github',
-	'plus.google.com' => 'google',
+	'plus.google.com' => 'google-plus',
 	'instagram.com'   => 'instagram',
 	'linkedin.com'    => 'linkedin',
 	'mailto:'         => 'envelope-open-regular',

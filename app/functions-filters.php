@@ -108,9 +108,12 @@ add_filter( 'walker_nav_menu_start_el', function( $item_output, $item, $depth, $
 			if ( false !== strpos( $item->url, $url ) ) {
 				$item_output = str_replace(
 					$args->link_before,
-					Svg::render( $icon ) . $args->link_before,
+					Svg::render( 'social-icons', $icon ) . $args->link_before,
 					$item_output
 				);
+
+				// Only add one icon per menu item.
+				break;
 			}
 		}
 	}
