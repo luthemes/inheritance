@@ -8,6 +8,7 @@
 * Fixed fatal errors on the Inheritance Settings page
 * Fixed the settings page heading, Customize link and tab classes not showing
 * Fixed deprecation notice from `Collection::jsonSerialize()` on PHP 8.1 and higher
+* Fixed the featured image size on pages, and a fatal error when the size setting was saved blank
 
 ### Enhancement
 * Removed the Footer Sidebar widget area, which was registered but never displayed
