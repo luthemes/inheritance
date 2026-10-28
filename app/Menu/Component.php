@@ -58,7 +58,7 @@ class Component implements Bootable {
 		add_action( 'after_setup_theme', [ $this, 'register' ] );
 
 		// Register default menus.
-		add_action( 'momentum/core/menu/register', [ $this, 'registerDefaultMenus' ] );
+		add_action( 'inheritance/menu/register', [ $this, 'registerDefaultMenus' ] );
 	}
 
 	/**
@@ -71,7 +71,10 @@ class Component implements Bootable {
 	public function register() {
 
 		// Hook for registering custom menus.
-		do_action( 'momentum/core/menu/register', $this->menus );
+		do_action( 'inheritance/menu/register', $this->menus );
+
+		// Deprecated hook name, kept for child themes that still use it.
+		do_action_deprecated( 'momentum/core/menu/register', [ $this->menus ], '0.1.3', 'inheritance/menu/register' );
 
 		// Loop through the collection and register each menu.
 		foreach ( $this->menus->all() as $menu ) {

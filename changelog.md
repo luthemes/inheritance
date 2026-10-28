@@ -1,5 +1,21 @@
 # Change Log
 
+## 0.1.3 - Unreleased
+### Bug
+* Fixed fatal error on category, tag, author and date archives
+* Fixed fatal error in the social menu when a link matched an icon
+* Fixed duplicate social icons and the missing Google+ icon
+* Fixed fatal errors on the Inheritance Settings page
+* Fixed the settings page heading, Customize link and tab classes not showing
+* Fixed deprecation notice from `Collection::jsonSerialize()` on PHP 8.1 and higher
+
+### Enhancement
+* Updated Backdrop framework to the `develop` branch
+* Renamed leftover `momentum/` hooks to `inheritance/`; the old names still work but are deprecated
+* Renamed the `inheritance/config/{$name}/` filter to `inheritance/config/{$name}`; the old name still works but is deprecated
+* Updated readme and theme metadata
+* Updated release workflow actions
+
 ## 0.1.2 - 03.02.2026
 ### Bug
 * Fixed Metadata spacing

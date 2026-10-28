@@ -2,7 +2,7 @@
 /**
  * Collection Class.
  *
- * An extension of the Hybrid Core `Collection` class that implements the
+ * An extension of the Backdrop `Collection` class that implements the
  * `JsonSerializable` interface.  Note that this class will be removed in the
  * future if/when this gets added to the framework.
  *
@@ -33,6 +33,7 @@ class Collection extends CollectionBase implements JsonSerializable {
 	 * @access public
 	 * @return array
 	 */
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize() {
 
 		return array_map( function( $value ) {
