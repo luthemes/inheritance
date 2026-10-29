@@ -39,7 +39,7 @@
 	screenreadertext.textContent = inheritanceScreenReaderText.expandMain;
 	button.appendChild( screenreadertext );
 
-	parentLink = container.querySelectorAll( '.menu-item-has-children, .page_item_has_children' );
+	parentLink = container.querySelectorAll( '.has-children, .menu-item-has-children, .page_item_has_children' );
 
 	for ( i = 0, len = parentLink.length; i < len; i++ ) {
 		var dropdown = document.createElement( 'button' ),
@@ -115,18 +115,18 @@
 	function toggleFocus() {
 		var self = this;
 
-		// Move up through the ancestors of the current link until we hit .nav-menu.
-		while ( -1 === self.className.indexOf( 'menu-items' ) ) {
+		// Walk upward until .menu-items OR stop if no parent.
+		while ( self && self.className && -1 === self.className.indexOf( 'menu__items' ) ) {
 
-			// On li elements toggle the class .focus.
-			if ( 'li' === self.tagName.toLowerCase() ) {
-				
+			if ( self.tagName && 'li' === self.tagName.toLowerCase() ) {
+
 				if ( -1 !== self.className.indexOf( 'focus' ) ) {
 					self.className = self.className.replace( ' focus', '' );
 				} else {
 					self.className += ' focus';
 				}
 			}
+
 			self = self.parentElement;
 		}
 	}
@@ -136,7 +136,7 @@
 	 */
 	( function( container ) {
 		var touchStartFn, i,
-			parentLink = container.querySelectorAll( '.menu-item-has-children > a, .page_item_has_children > a' );
+			parentLink = container.querySelectorAll( '.has-children > a, .menu-item-has-children > a, .page_item_has_children > a' );
 
 		if ( 'ontouchstart' in window ) {
 			touchStartFn = function( e ) {

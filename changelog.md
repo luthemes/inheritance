@@ -1,5 +1,30 @@
 # Change Log
 
+## 0.1.4 - 10.28.2026
+### Bug
+* Fixed submenus on small and touch screens: no submenu toggle was added, so child pages couldn't be opened
+* Fixed a JavaScript error on every keyboard focus change in the menu
+* Fixed the menu toggles' empty screen reader text
+* Fixed the customizer loading four scripts and styles that don't exist, which caused a JavaScript error, and a "must be an array" notice from `wp_localize_script()`
+* Fixed Custom Footer Text showing in the customizer while the "powered by" credit was on; controls that don't apply are now hidden when the customizer opens
+* Fixed the "disable emoji", "disable toolbar" and "disable WP embed" settings, which had no effect
+* Fixed unstyled emoji images on browsers without native emoji
+* Fixed the charset and viewport meta tags printing twice
+* Fixed a fatal error when the Backdrop framework isn't installed; administrators now see a notice and visitors a 503 page
+* Fixed a fatal error ("Call to undefined function Inheritance\Vite\asset()") when `vendor/` was installed before the Vite helper was added
+* Fixed the customize component booting twice
+* Fixed translations not loading from `public/lang`
+
+### Security
+* Updated the build tools: Vite 7.3.7, Rollup 4.66.0 (CVE-2026-27606 was fixed in 4.59) and Immutable 5.1.9 (CVE-2026-29063 was fixed in 5.1.5), with `overrides` keeping Rollup and Immutable at patched versions; `npm audit` finds no vulnerabilities
+* The release workflow no longer needs the `PRIVATE_KEY` or `TOKEN` secrets, installs exactly what `package-lock.json` pins, checks that the release tag matches the `style.css` version, and stops if `npm audit` finds a high or critical vulnerability
+
+### Enhancement
+* Removed `backdrop-dev/mix`, which wasn't used, and `composer.lock`; `backdrop-dev/framework` and `backdrop-dev/fonts` are pinned to the commits this release was tested with
+* Renamed the `generosity/image/size/{name}/label` filter to `inheritance/image/size/{name}/label`
+* `style.css` requires WordPress 5.9 or later (ClassicPress 2.0 or later) and declares `Domain Path: /public/lang`
+* Added a translation template, `public/lang/inheritance.pot`, and translator comments for the strings with placeholders
+
 ## 0.1.3 - 10.28.2026
 ### Bug
 * Fixed fatal error on category, tag, author and date archives

@@ -33,10 +33,14 @@ add_action( 'wp_enqueue_scripts', function() {
 	wp_enqueue_script( 'inheritance-app', asset( 'resources/js/app.js' ), [ 'jquery' ], null, true );
 
 	// Enqueue Navigation.
-	wp_enqueue_script( 'inheritance-navigation', asset( 'resources/js/navigation.js' ), null, null, true );
+	wp_enqueue_script( 'inheritance-navigation', asset( 'resources/js/navigation.js' ), [ 'jquery' ], null, true );
+
+	// Screen reader text for the menu toggles. `navigation.js` sets these as plain text.
 	wp_localize_script( 'inheritance-navigation', 'inheritanceScreenReaderText', [
-		'expand'   => '<span class="screen-reader-text">' . esc_html__( 'expand child menu', 'inheritance' ) . '</span>',
-		'collapse' => '<span class="screen-reader-text">' . esc_html__( 'collapse child menu', 'inheritance' ) . '</span>',
+		'expandMain'    => __( 'Open the main menu', 'inheritance' ),
+		'collapseMain'  => __( 'Close the main menu', 'inheritance' ),
+		'expandChild'   => __( 'expand child menu', 'inheritance' ),
+		'collapseChild' => __( 'collapse child menu', 'inheritance' ),
 	] );
 
 	/**

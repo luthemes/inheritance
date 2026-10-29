@@ -33,6 +33,10 @@ use function Backdrop\is_classicpress;
  * @link   https://developer.wordpress.org/reference/functions/load_theme_textdomain/
  */
 add_action( 'after_setup_theme', function() {
+
+		// Load the theme's translations from `public/lang`.
+		load_theme_textdomain( 'inheritance', get_parent_theme_file_path( 'public/lang' ) );
+
 		/**
 		 * Content width is a theme feature, when set, it can set the maximum allow width for any content in teh theme like
 		 * oEmbeds and images added to posts.
