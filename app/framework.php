@@ -16,7 +16,12 @@
 # This code creates the one true instance of the Backdrop Core Application, which can
 # be access via the `Backdrop\app();` function or the `Backdrop\App` static class after
 # the application has been booted.
-$theme = new Backdrop\Core\Application();
+// Reuse an application that has already been booted. `Backdrop\booted()` was added on the
+// framework's `develop` branch; if an older copy of the framework is loaded first (for
+// example, one bundled with a plugin), fall back to creating a new application.
+$theme = function_exists( 'Backdrop\booted' ) && Backdrop\booted()
+	? Backdrop\app()
+	: new Backdrop\Core\Application();
 
 # ------------------------------------------------------------------------------
 # Register default service providers with the application.
@@ -25,15 +30,15 @@ $theme = new Backdrop\Core\Application();
 # Here are the default service providers that are essential for the theme to function
 # before booting the application. These service providers form the foundation for the
 # theme.
-$theme->provider( Backdrop\Customize\Provider::class );
 $theme->provider( Backdrop\Fonts\Provider::class );
-// $theme->provider( Backdrop\Mix\Provider::class );
 
 /**
  * Register custom providers for the theme.
  */
 
 $theme->provider( Inheritance\Provider::class );
+// Boots the theme's customize component, which extends the framework's
+// `Backdrop\Customize\Component`, so `Backdrop\Customize\Provider` isn't registered as well.
 $theme->provider( Inheritance\Customize\Provider::class );
 $theme->provider( Inheritance\Image\Provider::class );
 $theme->provider( Inheritance\Menu\Provider::class );

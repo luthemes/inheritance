@@ -34,6 +34,9 @@ if ( file_exists( get_parent_theme_file_path( 'vendor/autoload.php' ) ) ) {
 array_map( function( $file ) {
 	require_once( get_parent_theme_file_path( "app/{$file}.php" ) ); // phpcs:ignore
 }, [
+	// Loaded here rather than by Composer, so `Inheritance\Vite\asset()` exists even when
+	// `vendor/` was built before this file was added. The asset functions below use it.
+	'Vite/functions-helpers',
 	'functions-assets',
 	'functions-filters',
 	'functions-setup',
