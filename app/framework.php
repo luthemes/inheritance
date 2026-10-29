@@ -37,6 +37,7 @@ $theme->provider( Backdrop\Fonts\Provider::class );
  */
 
 $theme->provider( Inheritance\Provider::class );
+$theme->provider( Inheritance\Clean\Provider::class );
 // Boots the theme's customize component, which extends the framework's
 // `Backdrop\Customize\Component`, so `Backdrop\Customize\Provider` isn't registered as well.
 $theme->provider( Inheritance\Customize\Provider::class );
