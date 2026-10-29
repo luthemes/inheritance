@@ -1,0 +1,29 @@
+{
+  "resources/js/app.js": {
+    "file": "js/app-BPRADi_B.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true
+  },
+  "resources/js/customize-controls.js": {
+    "file": "js/customize-controls-_pOZDuBe.js",
+    "name": "customize-controls",
+    "src": "resources/js/customize-controls.js",
+    "isEntry": true
+  },
+  "resources/js/navigation.js": {
+    "file": "js/nav-B1JEiznC.js",
+    "name": "nav",
+    "src": "resources/js/navigation.js",
+    "isEntry": true
+  },
+  "resources/scss/screen.scss": {
+    "file": "css/screen-rGPnQ-P4.css",
+    "src": "resources/scss/screen.scss",
+    "isEntry": true,
+    "name": "screen",
+    "names": [
+      "screen.css"
+    ]
+  }
+}

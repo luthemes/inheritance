@@ -1,0 +1,1 @@
+wp.customize.bind("ready",function(){var n=function(i){var c=function(t){i.container.toggleClass("inheritance-control-inactive",!t)};c(i.active()),i.active.bind(c)};wp.customize.control.each(n),wp.customize.control.bind("add",n)});

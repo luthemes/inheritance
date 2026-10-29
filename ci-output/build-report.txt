@@ -1,0 +1,40 @@
+node v24.22.1 npm 11.19.1
+== npm install
+
+added 24 packages, and audited 25 packages in 6s
+
+found 0 vulnerabilities
+install_exit=0
+== versions
+esbuild@0.28.2 immutable@5.1.9 postcss@8.5.32 rollup@4.66.0 sass@1.107.0 vite@7.3.7 
+== npm ci from the new lock
+added 24 packages, and audited 25 packages in 497ms
+
+found 0 vulnerabilities
+ci_exit=0
+== npm audit
+found 0 vulnerabilities
+audit_exit=0
+== composer install
+Installing dependencies from lock file
+  - Installing backdrop-dev/fonts (dev-develop c64cb8a): Extracting archive
+  - Installing backdrop-dev/framework (dev-develop 7989430): Extracting archive
+composer_exit=0
+== npm run build
+[32m✓ built in 421ms[39m
+✅ Export complete → inheritance
+build_exit=0
+== manifest keys
+['resources/js/app.js', 'resources/js/customize-controls.js', 'resources/js/navigation.js', 'resources/scss/screen.scss']
+== zip
+  1882405                     338 files
+== zip has
+ok style.css
+ok vendor/autoload.php
+ok public/assets/manifest.json
+ok app/framework-missing.php
+ok config
+== php lint
+lint done
+== built js uses module syntax?
+none
