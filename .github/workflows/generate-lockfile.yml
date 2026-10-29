@@ -1,0 +1,48 @@
+# Temporary: generates package-lock.json and dry-runs the release build. Not merged.
+name: Generate lock file
+
+on:
+    push:
+        branches:
+            - chore/generate-lockfile
+
+permissions:
+    contents: write
+
+jobs:
+    lockfile:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+            - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+              with:
+                  node-version: 24
+
+            - name: Install, audit, build, export and lint
+              run: |
+                  set +e
+                  rm -f package-lock.json
+                  {
+                    echo "node $(node -v) npm $(npm -v)"
+                    echo "== npm install"; npm install --no-fund 2>&1 | grep -v install-scripts | tail -5; echo "install_exit=${PIPESTATUS[0]}"
+                    echo "== versions"; npm ls --all 2>&1 | grep -oE "(vite|rollup|sass|immutable|esbuild|postcss)@[0-9.]+" | sort -u | tr '\n' ' '; echo
+                    echo "== npm ci from the new lock"; rm -rf node_modules; npm ci --no-fund 2>&1 | grep -v install-scripts | tail -3; echo "ci_exit=${PIPESTATUS[0]}"
+                    echo "== npm audit"; npm audit --audit-level=high 2>&1 | tail -4; echo "audit_exit=${PIPESTATUS[0]}"
+                    echo "== composer install"; composer install --no-dev --no-interaction --prefer-dist 2>&1 | grep -E "Installing|Error|error" ; echo "composer_exit=${PIPESTATUS[0]}"
+                    echo "== npm run build"; npm run build 2>&1 | grep -E "built in|Export complete|rror|empty chunk" ; echo "build_exit=${PIPESTATUS[0]}"
+                    echo "== manifest keys"; python3 -c "import json;print(sorted(json.load(open('public/assets/manifest.json'))))"
+                    NAME=${{ github.event.repository.name }}
+                    echo "== zip"; zip -qr $NAME.zip $NAME && unzip -l $NAME.zip | tail -1
+                    echo "== zip has"; for f in style.css vendor/autoload.php public/assets/manifest.json app/framework-missing.php config; do unzip -l $NAME.zip "$NAME/$f*" >/dev/null 2>&1 && echo "ok $f" || echo "MISSING $f"; done
+                    echo "== php lint"; find $NAME -name '*.php' -print0 | xargs -0 -n1 php -l 2>&1 | grep -v "^No syntax errors" | head; echo "lint done"
+                    echo "== built js uses module syntax?"; grep -lE "^(import|export) " public/assets/js/*.js || echo none
+                  } > build-report.txt 2>&1
+                  mkdir -p ci-output && cp -r public/assets ci-output/ && cp build-report.txt package-lock.json ci-output/ 2>/dev/null
+
+            - name: Commit results to this branch
+              run: |
+                  git config user.name "github-actions[bot]"
+                  git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+                  git add -f ci-output
+                  git commit -m "CI output: lock file, build report and built assets" && git push
